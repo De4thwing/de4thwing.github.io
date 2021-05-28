@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Если вы сомневаетесь в своем вкусе, знайте: он у вас есть. "</h1>
+                <h2 class="intro_subtitle">Уистен Хью Оден</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Внешние шрифты</h3>
+             <div class="section_text"><p>Не всегда стандартные встроенные шрифты, как Arial или Verdana, могут быть удобны. 
+                Нередко встречается ситуация, когда веб-дизайнер хочет воспользоваться возможностями какого-то другого шрифта, которого нет среди встроенных, но который доступен из внешнего файла.
+                Такой шрифт можно подключить с помощью директивы font-face:</p>
+<pre>
+    <code>
+    @font-face {
+     
+        font-family: 'Roboto';
+        src: url(http://fonts.gstatic.com/s/roboto/v15/mErvLBYg_
+        cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2);
+    }
+    </code>
+</pre>
+            <p>Свойство font-family задает название шрифта, а свойство src - путь к шрифту.</p>
+            <p>В данном случае веб-страница будет подгружать шрифт, который расположен в интернете по адресу <a href=" http://fonts.gstatic.com/s/roboto/v15/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2" class="nav_link1"> http://fonts.gstatic.com/s/roboto/v15/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2</a></p>
+            <p>В качестве альтернативы мы можем загрузить файл шрифта на локальный компьютер и уже оттуда подгружать его на веб-страницу. Как правило, для хранения своих шрифтов рядом с веб-страницей создается папка fonts:</p>
+<pre>
+    <code>
+    @font-face{
+     
+        font-family: 'Roboto';
+        src:url('fonts/roboto.ttf');
+    }
+    </code>
+</pre>
+            <p>После подключения шрифта, его можно использовать в стилях</p>
+<pre>
+    <code>
+    p{
+     
+        font-family: Roboto;
+    }
+    </code>
+</pre>
+            <p>В данном случае используется шрифт Roboto, созданный компанией Google и определенный в файле в формате woff2.
+            Однако не все браузеры поддерживают данный формат шрифтов.</p>
+            <p>Грубо говоря, существует несколько различных форматов шрифтов: TrueType( расширение ttf), Open Type (расширение otf), Embedded Open Type (расширение eot), Web Open Font Format (woff/woff2), Scalable Vector Graphic (svg). Разные браузеры могут поддерживать разные шрифты. И чтобы решить проблему поддержки шрифтов 
+            создатели шрифта часто создают сразу несколько форматов. И мы можем сразу эти форматы определить. Например</p>
+<pre>
+    <code>
+    @font-face {
+     
+        font-family:'FontAwesome';
+        src: url('https://maxcdn.bootstrapcdn.com/font-awesome
+        /4.6.1/fonts/fontawesome-webfont.eot');
+            src: url('https://maxcdn.bootstrapcdn.com/font-awesome/
+            4.6.1/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+            url('https://maxcdn.bootstrapcdn.com/font-awesome/
+            4.6.1/fonts/fontawesome-webfont.woff2') format('woff2'),
+            url('https://maxcdn.bootstrapcdn.com/font-awesome/
+            4.6.1/fonts/fontawesome-webfont.woff') format('woff'),
+            url('https://maxcdn.bootstrapcdn.com/font-awesome/
+            4.6.1/fonts/fontawesome-webfont.ttf') format('truetype'),
+            url('https://maxcdn.bootstrapcdn.com/font-awesome/
+            4.6.1/fonts/fontawesome-webfont.svg') format('svg');
+    }
+    </code>
+</pre>
+        <p>Как и в предыдущем случае свойства font-family и src задают название и путь к шрифту. Но теперь также для совместимости добавляется еще одно свойство src. Второе свойство src устанавливает сразу несколько шрифтов. Первым шрифтом также идет шрифт в формате EOT, но теперь к расширению файла .eot добавляется значение ?#iefix. Это делается для совместимости с версиями Internet Explorer 6–8. 
+        Если после .eot не будет добавляться это значение, то шрифт может неправильно отображаться в Internet Explorer 6-8.</p>
+        <p>После параметра url идет определение формата шрифта:</p>
+<pre>
+    <code>
+    format('embedded-opentype')
+    </code>
+</pre>
+        <p>Когда браузер начнет загружать веб-страницу, на которой таким образом определен шрифт, 
+        то браузер не будет подгружать все шрифты во всех форматах, а загрузит только первый шрифт, который для него окажется понятным.</p>
+        <p><strong>Разные версии шрифта</strong></p>
+        <p>Загрузим шрифт Roboto по ссылке <a href="https://www.google.com/fonts/download?kit=hY6_qqcqX_JNp8IlbByiXfesZW2xOQ-xsNqO47m55DA"> Roboto</a> на локальный компьютер. Распакуем загруженный архив в папку, которую назовем fonts, и положим эту папку в один каталог рядом с веб-страницей. 
+        В загруженной папке шрифта Roboto мы сможем увидеть, что она содержит не один файл, а сразу несколько:</p>
+        <img src="img/Пример27.png" alt="">
+        <p>Зачем нам столько файлов? Дело в том, что каждый шрифт должен определять отдельный стиль для обычного текста, для текста, выделенного курсивом, для текста, выделенного жирным, для текста, сочетающего выделение жирным и курсивом и т.д.</p>
+        <p>Чтобы браузер мог автоматически распознавать разные варианты шрифта, к директиве @font-face добавляются свойства font-weight и font-style, которые соответственно устанавливают выделение жирным и выделение курсивом</p>
+<pre>
+    <code>
+    @font-face {
+        font-family: 'Roboto';
+        src: url(fonts/Roboto-Regular.ttf);
+        font-weight: normal;
+        font-style: normal;
+    }
+    p{
+        font-family: Roboto;
+    }
+    </code>
+</pre>
+        <p>Поскольку версия шрифта Roboto-Regular.ttf применяется для текста, не выделенного курсивом и жирным, то вместе с ним устанавливаются значения:</p>
+<pre>
+    <code>
+    font-weight: normal;
+    font-style: normal;
+    </code>
+</pre>
+        <p>То есть тем самым мы устанавливаем, что выделения курсивом не будет (font-style: normal;) и выделения жирным не будет (font-weight: normal;)</p>
+        <p>Кроме версии Roboto-Regular.ttf, как видно выше на картинке, в папке есть еще другие версии шрифта Roboto. Например, курсивная версия шрифта Roboto-Italic.ttf и ряд других.</p>
+        <p>Если мы хотим, чтобы при выделении курсивом браузер использовал именно курсивную версию, то нам надо добавить еще одну директиву font-face:</p>
+<pre>
+    <code>
+    @font-face {
+        font-family: 'Roboto';
+        src: url(fonts/Roboto-Italic.ttf);
+        font-weight: normal;
+        font-style: italic;
+    }
+    </code>
+</pre>    
+            <p>Значение font-style: italic указывает, что данную версию шрифта следует применять при выделении курсивом.</p>
+            <p>Аналогично мы можем задать те версии шрифта, которые должны использоваться при выделении сразу и жирным, и курсивом, либо только при выделении жирным:</p>
+<pre>
+    <code>
+    @font-face {
+        font-family: 'Roboto';
+        src: url(fonts/Roboto-Bold.ttf);
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Roboto';
+        src: url(fonts/Roboto-BoldItalic.ttf);
+        font-weight: bold;
+        font-style: italic;
+    }
+    </code>
+</pre>
+            <p>Значение font-weight: bold указывает, что данная версия шрифта применяется при выделении жирным.</p>
+            <p>Теперь используем все эти шрифты:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Шрифты в CSS3&lt;/title&gt;
+                 
+            &lt;style&gt;
+                @font-face {
+                    font-family: 'Roboto';
+                    src: url(fonts/Roboto-Regular.ttf);
+                    font-weight: normal;
+                    font-style: normal;
+                }
+                @font-face {
+                    font-family: 'Roboto';
+                    src: url(fonts/Roboto-Italic.ttf);
+                    font-weight: normal;
+                    font-style: italic;
+                }
+                @font-face {
+                    font-family: 'Roboto';
+                    src: url(fonts/Roboto-Bold.ttf);
+                    font-weight: bold;
+                    font-style: normal;
+                }
+                     
+                @font-face {
+                    font-family: 'Roboto';
+                    src: url(fonts/Roboto-BoldItalic.ttf);
+                    font-weight: bold;
+                    font-style: italic;
+                }
+                p{
+                    font-family: Roboto;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;Стиль Roboto может выделять &lt;i&gt;курсивом&lt;/i&gt; и &lt;b&gt;жирным&lt;/b&gt;, либо &lt;b&gt;&lt;i&gt;и тем, и другим&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+            <p>Теперь к тексту в тегах &lt;i&gt;&lt;/i&gt;, который использует курсив, будет применяться версия "Roboto-Italic.ttf", а к тексту в тегах &lt;b&gt;&lt;/b&g   t; - шрифт "Roboto-Bold.ttf".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Источники шрифтов</h3>
+             <div class="section_text">
+                В интернете можно найти множество нестандартных шрифтов. Наиболее популярным репозиторием шрифтов является 
+                <a href="https://www.google.com/fonts/">https://www.google.com/fonts/</a> - набор шрифтов от компании Google.
+                <p>Также другим известным репозиторием шрифтов является <a href="https://www.fontsquirrel.com/fonts/list/hot_web">Font Squirrel.</a> </p>
+                <p>Следует также упомянуть такой популярный шрифт как <a href="https://fontawesome.ru/"> FontAwesome.</a> Он предоставляет множество различных интересных иконок, которые можно использовать на веб-странице</p>
+    </div>
+        </div>
+            </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Шрифт1.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Стилизация шрифтов.html">Стилизация шрифта</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Шрифт2.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Высота шрифта.html">Высота шрифта</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/Цвет CSS.png" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Цвет.html">Цвет</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

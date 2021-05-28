@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Черное — это цвет ночи. Белое — вот истинный цвет смерти."</h1>
+                <h2 class="intro_subtitle">Мелисса де ла Круз, из книги «Голубая кровь</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Линейный градиент</h3>
+             <div class="section_text"><p>Градиенты представляют плавный переход от одного цвета к другому. В CSS3 имеется ряд встроенных градиентов, 
+                которые можно использовать для создания фона элемента.</p>
+            <p>Градиенты в CSS не представляют какого-то специального свойства.
+                 Они лишь создают значение, которое присваивается свойству background-image.</p>
+            <p>Линейный градиент распространяется по прямой от одного конца элемента к другому, осуществляя плавный переход от одного цвета к другому.</p>
+            <p>Для создания градиента нужно указать его начало и несколько цветов, например:</p>
+<pre>
+    <code>
+    background-image: linear-gradient(left,black,white);
+    </code>
+</pre>
+            <p>В данном случае началом градиента будет левый край элемента, который обозначается значением left.
+                Цвета градиента: черный (black) и белый (white).
+                То есть начиная с левого края элемента до правого будет плавно идти переход из черного цвета в белый.
+            </p>    
+            <p>В данном случае началом градиента будет левый край элемента, который обозначается значением left. 
+                Цвета градиента: черный (black) и белый (white). То есть начиная с левого края элемента до правого будет плавно идти переход из черного цвета в белый.</p>
+<pre>
+    <code>
+    -webkit- /* Для Google Chrome, Safari, Microsoft Edge, Opera выше 15 версии  */
+    -moz- /* Для Mozilla Firefox  */
+    -o- /* Для Opera старше 15 версии (Opera 12)  */
+    </code>
+</pre>
+           <p>Так, полноценное использование градиента будет выглядеть следующим образом:</a></p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стилизация таблиц в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            div {
+                width: 200px;
+                height: 100px;
+                background-color: #eee;
+                background-image: linear-gradient(left,black,white);
+                background-image: -o-linear-gradient(left,black,white);
+                background-image: -moz-linear-gradient(left,black,white);
+                background-image: -webkit-linear-gradient(left,black,white);
+            }
+            p{
+                margin: 0;
+                padding-top: 30px;
+                text-align: center;
+                color:white;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div&gt;&lt;p&gt;Линейный черно-белый градиент&lt;/p&gt;&lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;        
+    </code>
+</pre>
+                <img src="img/Пример17.png" alt="">
+                <p>Для установки начала градиента можно использовать следующие значения: left (слева направо), right (справа налево), 
+                top (сверху вниз) или bottom (снизу вверх) Например, вертикальный градиент будет выглядеть следующим образом:.
+                </p>
+<pre>
+    <code>
+    background-image: linear-gradient(bottom,black,white);
+    </code>
+</pre>
+                <p>Также можно задать диагональное направление с помощью двух значений:</p>
+<pre>
+    <code>
+    background-image: linear-gradient(top left,black,white);
+    </code>
+</pre>
+                <p>Кроме конкретных значений типа top или left также можно указать угол от 0 до 360, который определит направление градиента:</p>
+<pre>
+    <code>
+    background-image: linear-gradient(30deg,black,white);
+    </code>
+</pre>
+                <p>После величины углы указывается слово deg.</p>
+                <p>К примеру, 0deg означает, что градиент начинается в левой части и перемещается в правую часть, 
+                а при указании 45deg он начинается в нижнем левом углу и перемещается под углом 45° в верхний правый угол.</p>
+                <p>После определения начала градиента, можно указать применяемых цветов или опрные точки.
+                Цветов не обязательно должно быть два, их может быть и больше:</p>
+<pre>
+    <code>
+    background-image: linear-gradient(top, red, #ccc, blue);
+    </code>
+</pre>
+                <p>Все применяемые цвета распределяются равномерно. Однако можно также указать конкретные места фона для цветовых точек.
+                Для этого после цвета добавляется второе значение, которое и определяет положение точки.</p>
+<pre>
+    <code>
+    background-image: linear-gradient(left, #ccc, red 20%, red 80%, #ccc);
+    </code>
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Повторяющийся градиент</h3>
+             <div class="section_text">
+                С помощью repeating-linear-gradient можно создавать повторяющиеся линейные градиенты. Например:
+<pre>
+    <code>
+    background-image: repeating-linear-gradient(left, #ccc 20px, red 30px, rgba(0, 0, 126, .5) 40px);
+    background-image: -moz-repeating-linear-gradient(left, #ccc 20px, red 30px, rgba(0, 0, 126, .5) 40px);
+    background-image: -webkit-repeating-linear-gradient(left, #ccc 20px, red 30px, rgba(0, 0, 126, .5) 40px);
+    </code>
+</pre>
+            <p>В данном случае градиент начинается с левого края элемента с полоски серого цвета (#ccc) шириной 20 пикселей, далее до 30 пикселей идет переход к красному цвету, а затем до 40 пикселей выполняется обратный переход к светло-синему цвету (rgba(0, 0, 126, .5)). 
+            После этого браузер повторяет градиент, пока не заполнит всю поверхность элемента.</p>
+    </div>
+        </div>
+            </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Цвет CSS.png" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Цвет в CSS.html">Цвет в CSS</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Градиент радиальный.png" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Радиальный градиент.html">Радиальный градиент</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/ФОн элемента.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Фон.html">Фон элемента</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

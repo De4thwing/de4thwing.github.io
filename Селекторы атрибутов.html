@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Мы не можем перекладывать свои ошибки на используемые технологии."</h1>
+                <h2 class="intro_subtitle">Тим Бернерс-Ли</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Селекторы атрибутов</h3>
+             <div class="section_text"><p>Кроме селекторов элементов мы также можем использовать селекторы их атрибутов. 
+                 Например, у нас есть на веб-странице несколько полей input, а нам надо окрасить в красный цвет только текстовые поля. 
+                 В этом случае мы как раз можем проверять значение атрибута type: если оно имеет значение text, то это текстовое поле, 
+                 и соответственно его надо окрасить в красный цвет. Определение стиля в этом случае выглядело бы так:
+             </p>
+<pre>
+    <code>
+input[type="text"]{
+     
+border: 2px solid red;
+}
+    </code>
+</pre>
+            <p>После элемента в квадратных скобках идет атрибут и его значение. То есть в данном случае мы говорим, 
+                что для текстового поля надо установить 
+                границу красного цвета 2 пикселя толщиной сплошной линией.</p>
+             <p>Например:</p>
+<pre>
+    <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+                &lt;title>Селекторы атрибутов в CSS3&lt;/title&gt;
+                &lt;style&gt;
+                    input[type="text"]{
+                        border: 2px solid red;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;&lt;input type="text" id="login" /&lt;/p&gt;
+                &lt;p&gt;input type="password" id="password" />&lt;/p&gt;
+                &lt;input type="submit" value="Send" /&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+                <p>Селекторы атрибутов можно применять не только к элементам, но и классам и идентификаторам. Например:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Селекторы атрибутов в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                .link[href="http://apple.com"]{
+                     
+                    color: red;
+    }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;a class="link" href="http://microsoft.com">Microsoft&lt;/a&gt;  
+                &lt;a class="link" href="https://google.com">Google&lt;/a&gt;  
+                &lt;a class="link" href="http://apple.com">Apple&lt;/a&gt;
+            &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+                    <p>Специальные символы позволяют конкретизировать значение атрибутов.
+                         Например символ ^ позволяет выбрать все атрибуты, которые начинаются на определенный текст.
+                          Например, нам надо выбрать все ссылки, которые используют протокол https, 
+                          то есть ссылка должна начинаться на "https://". В этом случае можно применить следующий селектор:</p>
+<pre>
+    <code>
+    a[href^="https://"]{
+             
+        color: red;
+    }
+    </code>
+</pre>
+                    <p>Если значение атрибута должно иметь в конце определенный текст, то для проверки используется символ $.
+                    Например, нам надо выбрать все изображения в формате jpg. 
+                    В этом случае мы можем проверить, оканчивается ли значение атрибута src на текст ".jpg":</p>
+<pre>
+    <code>
+    img[src$=".jpg"]{
+             
+        width: 100px;
+    }
+    </code>
+</pre>
+                    <p>И еще один символ "*" (звездочка) позволяет выбрать все элементы с атрибутами, 
+                    которые в своем значении имеют определенный текст (не важно где - в начале, середине или конце):</p>
+<pre>
+    <code>
+    a[href*="microsoft"]{
+             
+        color: red;
+    }
+    </code>
+</pre>
+                    <p>Данный атрибут выберет все ссылки, которые в своем адресе имеют текст "microsoft".</p>
+            </div>   
+        </div>
+     </div>
+     </div>
+    
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Селектор3.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Селекторы потомков.html">Селекторы потомков</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Селектор2.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Селекторы дочерних.html">Селекторы дочерних элементов</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/Селектор7.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Селекторы уровня.html">Селекторы элементов одного уровня</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

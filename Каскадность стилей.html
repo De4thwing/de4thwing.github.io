@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style7.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Магия перестаёт существовать после того, как вы понимаете, как она работает."</h1>
+                <h2 class="intro_subtitle">Тим Бернерс-Ли</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Каскадность стилей
+            </h3>
+            <div class="section_text">
+               <p>Когда к определенному элементу применяется один стиль, то все относительно просто.
+                Однако если же к одному и тому же элементу применяется сразу несколько различных стилей, 
+                то возникает вопрос, какой же из этих стилей будет в реальности применяться?</p>
+                <p>В CSS действует механизм каскадности, которую можно определить как набор правил, определяющих последовательность 
+                применения множества стилей к одному и тому же элементу.</p>
+                <p>К примеру, у нас определена следующая веб-страница:</p>
+    <pre>
+        <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Каскадность стилей в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                .redLink {color: red;}  /* красный цет текста */
+                .footer a {font-weight: bold;}  /* выделение жирным */
+                a {text-decoration: none;}  /* отмена подчеркивания ссылки */
+            &lt;/style&gt;
+            &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p class="footer"&gt;Для просмотра подробной информации пройдите по ссылке: 
+                &lt;a class="redLink" href="index.php">Основы CSS 3&lt;/a&gt;&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+        </code>
+    </pre>
+            <p>В CSS определено три стиля и все они применяются к ссылке.</p>
+            <p>Если к элементу веб-страницы применяется несколько стилей, которые не конфликтуют между собой, 
+            то браузер объединяет их в один стиль.</p>
+            <p>Так, в данном случае, все три стиля не конфликтуют между собой, поэтому все эти стили будут применяться к ссылке.</p>
+            <p>
+            Если же стили конфликтуют между собой, например, определяют разный цвет текста, 
+            то в этом случае применяется сложная система правил для вычисления значимости каждого стиля. 
+            Все эти правила описаны в спецификации по CSS: <a href="https://www.w3.org/TR/selectors-3/#specificity"> Calculating a selectors specificity.</a> Вкратце разберем их.
+            </p>
+            <p>Для определения стиля к элементу могут применяться различные селекторы, и важность каждого селектора оценивается в баллах. 
+            Чем больше у селектора пунктов, тем он важнее, 
+            и тем больший приоритет его стили имеют над стилями других селекторов.
+            </p>
+            <ul>
+                <li>
+                    Селекторы тегов имеют важность, оцениваемую в 1 балл
+                </li>
+                <li>
+                    Селекторы классов, атрибутов и псевдоклассов оцениваются в 10 баллов
+                </li>
+                <li>
+                    Селекторы идентификаторов оцениваются в 100 баллов
+                </li>
+                <li>
+                    Встроенные inline-стили (задаваемые через атрибут style) оцениваются в 1000 баллов
+                </li>
+            </ul>
+                <p>
+                    Например:
+                </p>
+    <pre>
+        <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title>Каскадность стилей в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                #index {color: navy;}   
+                .redLink {color: red; font-size: 20px;} 
+                a {color: black; font-weight: bold;}    
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;a id="index" class="redLink" href="index.php">Основы CSS 3&lt;/a>
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code>
+    </pre>
+                    <p>Здесь к ссылке применяется сразу три стиля. Эти стили содержат два не конфликтующих правила:</p>
+    <pre>
+        <code>
+    font-size: 20px;
+    font-weight: bold;
+        </code>
+    </pre>
+        <p>которые устанавливают высоту шрифта 20 пикселей и выделение ссылки жирным. 
+        Так как каждое из эти правил определено только в одном стиле, то в итоге они будут суммироваться и применяться к ссылке без проблем.</p>
+        <p>Кроме того, все три стиля содержат определение цвета текста, 
+        но каждый стиль определяет свой цвет текста. Так как селекторы идентификаторов имеют больший удельный вес, 
+        то в конечном счете будет применяться темно-синий цвет, задаваемый селектором:</p>
+    <pre>
+        <code>
+    #index {color: navy;}
+        </code>
+    </pre>
+            <p>Если селектор является составным, то происходит сложение баллов всех входящих в селектор подселекторов. 
+                Так, рассмотрим следующий пример:
+            </p>
+    <pre>
+        <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Каскадность стилей в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                a {font-size: 18px;}
+                .nav li a {color: red;}  /* красный цет текста */
+                #menu a {color: navy;}   /* темно-синий цет текста */
+                .nav .menuItem {color: green;}  /* зеленый цет текста */
+                a.menuItem:not(.newsLink) {color: orange;}  /* оранжевый цет текста */
+                div ul li a {color: gray; } /* серый цет текста */
+            &lt;/style&gt;
+            &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div id="menu"&gt;
+                &lt;ul class="nav"&gt;
+                    &lt;li&gt;&lt;a class="menuItem"&gt;Главная&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class="menuItem"&gt;Форум&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class="menuItem"&gt;Блог&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class="menuItem"&gt;О сайтеgt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+         &lt;/body&gt;
+     &lt;/html&gt;
+        </code>
+    </pre>    
+                    <p>
+                    В CSS определено аж пять различных селекторов, которые устанавливают цвет ссылок. В итоге браузер выберет селектор #menu a и окрасит ссылки в темно-синий цвет. Но почему, на каком основании браузер выберет этот селектор?</p>
+                    <p>Рассмотрим, как у нас будут суммироваться баллы по каждому из пяти селекторов:</p>
+
+                    <table class="features-table">
+                        <thead>
+                            <tr>
+                                <td>Селектор</td>
+                                <td class="grey">Идентификаторы</td>
+                                <td class="grey">Классы</td>
+                                <td class="grey">Теги</td>
+                                <td class="green">Cумма</td>
+                            </tr>
+                        </thead> 
+                        
+                            <tr>
+                                <td nowrap>.nav li a</td>
+                                <td class="grey">0</td>
+                                <td class="grey">1</td>
+                                <td class="grey">2</td>
+                                <td class="green">12</td>
+                            </tr>
+                         
+                        <tbody>
+                            <tr>
+                                <td nowrap>.nav .menuItem</td>
+                                <td class="grey">0</td>
+                                <td class="grey">2</td>
+                                <td class="grey">0</td>
+                                <td class="green">20</td>
+                            </tr>
+                         
+                            <tr>
+                                <td nowrap>a.menuItem:not(.newsLink)</td>
+                                <td class="grey">1</td>
+                                <td class="grey">0</td>
+                                <td class="grey">1</td>
+                                <td class="green">101</td>
+                            </tr>
+                         
+                            <tr>
+                                <td nowrap>#menu a</td>
+                                <td class="grey">0</td>
+                                <td class="grey">2</td>
+                                <td class="grey">1</td>
+                                <td class="green">21</td>
+                            </tr>
+                            <tr>
+                                <td nowrap>div ul li a</td>
+                                <td class="grey">0</td>
+                                <td class="grey">0</td>
+                                <td class="grey">4</td>
+                                <td class="green">4</td>
+                            </tr>
+                        </tbody>
+                        </table> 
+                        <p>Итак, мы видим, что для селектора #menu a в колонке 
+                        сумма оказалось больше всего баллов - 101. То есть в нем 1 идентификатор (100 баллов) 
+                        и один тег(1 балл), которые в сумме дают 101 балл.
+                        </p>
+                        <p>К примеру, в селекторе .nav .menuItem два селектора класса, 
+                        каждый из которых дает 10 баллов, то есть в сумме 20 баллов.
+                        </p>
+                        <p>
+                        К примеру, в селекторе .nav .menuItem два селектора класса,
+                        каждый из которых дает 10 баллов, то есть в сумме 20 баллов.
+                        </p>
+            </div>   
+       </div>
+    </div>
+    </div>      
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Правило !important</h3>
+                    <p>CSS предоставляет возможность полностью отменить значимость стилей. Для этого в конце стиля указывается значение 
+                    !important:</p>
+    <pre>
+        <code>
+    a {font-size: 18px; color: red !important;}
+    #menu a {color: navy;}
+        </code>
+    </pre>
+            <p>В этом случае вне зависимости от наличия других селекторов с большим количеством баллов к ссылкам будет применяться красный цвет, определяемый первым стилем.</p>
+            </div>
+                </div> 
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Другие Статьи</h3>
+                        </div>
+                            </div>                    
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Стиль2.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Введения в стили.html">Введение в стили</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Стиль3.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="20 советов.html">Наследование стилей</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/3.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Базовое руководство CSS3.html">Селекторы</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Стиль – это способ сказать, кто вы есть, без слов"</h1>
+                <h2 class="intro_subtitle">Рэйчел Зоуи</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Высота шрифта</h3>
+             <div class="section_text"><p>Для установки размера шрифта используется свойство font-size:</p>
+            <p>Например, определим красный цвет для фона элемента div:</p>
+<pre>
+    <code>
+    div{
+        font-size: 18px;
+    }
+    </code>
+</pre>
+            <p>В данном случае высота шрифта составит 18 пикселей. Пиксели представляют наиболее часто используемые единицы измерения.
+                Чтобы задать значение в пикселях, после самого значения идет сокращение "px".
+            </p>    
+            <p>Если к тексту явным образом не применяется высота шрифта, то используются значения браузера по умолчанию.
+                Например, для простого текста в параграфах это 16 пикселей. Это базовый стиль текста..</p>
+           <P>Базовый стиль для разных элементов текста отличается: если для параграфов это 16 пикселей,
+                то для заголовков h1 это 32 пикселя, для заголовков h2 - 24 пикселя и т..д.</P>
+           <p>Для измерения шрифта также можно использовать самые разные единицы измерения</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Ключевые слова</h3>
+            <div class="section_text">
+                В CSS имеется семь ключевых слов, которые позволяют назначить размер шрифта относительно базового:
+                <ul>
+                    <li>
+                        medium: базовый размер шрифта браузера (16 пикселей)
+                    </li>
+                    <li>
+                        small: 13 пикселей
+                    </li>
+                    <li>
+                        x-small: 10 пикселей
+                    </li>
+                    <li>
+                        xx-small: 9 пикселей
+                    </li>
+                    <li>
+                        large: 18 пикселей
+                    </li>
+                    <li>
+                        x-large: 24 пикселя
+                    </li>
+                    <li>
+                        xx-large: 32 пикселя
+                    </li>
+                </ul>
+                <p>Например:</p>
+<pre>
+    <code>
+    font-size: x-large;
+    </code>
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Проценты</h3>
+            <div class="section_text">
+                Проценты позволяют задать значение относительно базового или унаследованного шрифта. Например:
+<pre>
+    <code>
+    font-size: 150%;
+    </code>
+</pre>
+            <p>В данном случае высота шрифта будет составлять 150% от базового, то есть 16px * 1,5 = 24px</p>
+            <p>Наследование шрифта может изменить финальное значение. Например, следующую ситуацию:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Шрифты в CSS3&lt;/title&gt;
+         
+            &lt;style&gt;
+            div {font-size: 10px;}
+                p {font-size: 150%;}
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div&gt;
+                &lt;p&gt;Однажды в студеную зимнюю пору&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+            <p>Здесь элемент p наследует от контейнера - блока div шрифт высотой в 10 пикселей. То есть 10 пикселей теперь будет базовым для параграфа.</p>
+            <p>Далее для элемента p определяется новая высота шрифта в 150%. Это значит, что финальная высота будет равна 10px * 1,5 = 15px.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Единица еm</h3>
+             <div class="section_text">
+                Единица измерения еm во многом эквивалентна процентам. Так, 1em равен 100%, .5em равно 50% и т.д.
+    </div>
+        </div>
+            </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Шрифт1.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Стилизация шрифтов.html">Cтидизация шрифтов</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Шрифт3.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Внешнеи шрифты.html">Внешние шрифты</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/Цвет CSS.png" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Цвет.html">Цвет</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

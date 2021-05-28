@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Хотя в поисках прекрасного мы странствуем по всему свету, мы должны иметь его в себе, иначе нам не найти его."</h1>
+                <h2 class="intro_subtitle">Ральф Эмерсон</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Стилизация шрифтов</h3>
+             <div class="section_text">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <div class="container">
+                <div class="section_header">
+                     <h3 class="section_title">Семейство шрифтов</h3>
+                     <div class="section_text">
+                        Свойство font-family устанавливает семейство шрифтов, которое будет использоваться. Например:
+<pre>
+    <code>
+    body{
+        font-family: Arial;
+    }
+    </code>
+</pre>
+                    <p>В данном случае устанавливается шрифт Arial.</p>
+                    <p>Шрифт свойства font-family будет работать, только если у пользователя на локальном компьютере имеется такой же шрифт. 
+                        По этой причине нередко выбираются стандартные шрифты, которые широко распространены, как Arial, Verdana и т.д.</p>
+                    <p>Также нередко применяется практика нескольких шрифтов:</p>
+<pre>
+    <code>
+    body{
+        font-family: Arial, Verdana, Helvetica;
+    }
+    </code>
+</pre>
+                    <p>В данном случае основным шрифтом является первый - Arial. Если он на компьютере пользователя не поддерживается, то выбирается второй и т.д.</p>
+                    <p>Если название шрифта состоит из нескольких слов, например, Times New Roman, то все название заключается в кавычки:</p>
+<pre>
+    <code>
+    body{
+        font-family: "Times New Roman";
+    }
+    </code>
+</pre>
+                    <p>Кроме конкретных стилей также могут использоваться общие универсальные шрифты, задаваемые с помощью значений sans-serif и serif:</p> 
+<pre>
+    <code>
+    body{
+        font-family: Arial, Verdana, sans-serif;
+    }
+    </code>
+</pre>  
+                    <p>Так, если ни Arial, ни Verdana не поддерживаются на компьютере пользователя, то используется sans-serif - универсальный шрифт без засечек.</p>
+                        
+            </div>
+                </div>
+                    </div>
+                    <div class="container">
+                        <div class="section_header">
+                             <h3 class="section_title">Типы шрифтов</h3>
+                             <div class="section_text">
+                            <p><strong>Шрифты с засечками</strong></p>
+                            <p>Шрифты с засечками названы так, потому что на на концах основных штрихов имеют небольшие засечки. Считается, что они подходят для больших кусков текста,
+                            так как визуально связывают одну букву с другой, делая текст более читабельным.</p>
+                            <p>Распространенные шрифты с засечками: Times, Times New Roman, Georgia, Garamond. Универсальный обобщенный шрифт с засечками представляет значение serif.</p>
+                            <p><strong>Шрифты без засечек</strong></p>
+                            <p>В отличие от шрифтов с засечками шрифты из этой группы не имеют засечек. Наиболее распространенные шрифты этой группы: Arial, Helvetica, Verdana.</p>
+                            <p><strong>Моноширинные шрифты</strong></p>
+                            <p>Моноширинный шрифт преимущественно применяется для отображения программного кода и не предназначен для вывода стандартного текста статей. Свое название эти шрифты получили от того, что каждая буква в таком шрифте имеет одинаковую ширину. 
+                            Примеры подобных шрифтов: Courier, Courier New, Consolas, Lucida Console.</p>
+                            <p>Примеры шрифтов:</p>
+                            <img src="img/Пример24.png" alt="">
+                    </div>
+                        </div>
+                            </div>
+                            <div class="container">
+                                <div class="section_header">
+                                     <h3 class="section_title">Толщина шрифта</h3>
+                                     <div class="section_text">
+                                    <p>Свойство font-weight задает толщину шрифта. Оно может принимать 
+                                    9 числовых значений: 100, 200, 300, 400,...900. 100 - очень тонкий шрифт, 900 - очень плотный шрифт</p>
+                                    <p>В реальности чаще для этого свойства используют два значения: normal (нежирный обычный текст) и bold (полужирный шрифт):</p>
+<pre>
+    <code>
+    font-weight: normal;
+    font-weight: bold;
+    </code>
+</pre>                                    
+                            </div>
+                                </div>
+                                    </div>
+                                <div class="container">
+                                    <div class="section_header">
+                                    <h3 class="section_title">Курсив</h3>
+                                        <div class="section_text">
+                                        <p>Свойство font-style позволяет выделить текст курсивом. Для этого используется значение italic:</p>
+<pre>
+    <code>
+    p {font-style: italic;}
+    </code>
+</pre>
+                                        <p>Если надо отменить курсив, то применяется значение normal:</p>
+<pre>
+    <code>
+    p {font-style: normal;}
+    </code>
+</pre>                                    
+                                    </div>
+                                        </div>
+                                            </div>
+                                <div class="container">
+                                    <div class="section_header">
+                                    <h3 class="section_title">Цвет шрифта</h3>
+                                        <div class="section_text">
+                                            <p>Свойство color устанавливает цвет шрифта:</p>
+<pre>
+    <code>
+    p {
+        color: red;
+    }
+    </code>
+</pre>
+                                </div>
+                                    </div>
+                                        </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Шрифт2.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Высота шрифта.html">Высота шрифта</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Шрифт3.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Внешнеи шрифты.html">Внешние шрифты</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/Цвет CSS.png" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Цвет.html">Цвет</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

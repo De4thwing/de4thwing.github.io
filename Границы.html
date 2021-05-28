@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Всё в этой жизни имеет фальшивый оттенок!"</h1>
+                <h2 class="intro_subtitle">Петр Квятковский</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Границы</h3>
+             <div class="section_text"><p>Граница отделяется элемент от внешнего по отношению к нему содержимого. При этом граница является частью элемента.:</p>
+                <p>Для настройки границы могут использоваться сразу несколько свойств:</p>
+            <ul>
+                <li>
+                    border-width: устанавливает ширину границы
+                </li>
+                <li>
+                    border-style: задает стиль линии границы
+                </li>
+                <li>
+                    border-color: устанавливает цвет границы
+                </li>
+            </ul>
+           <p>Свойство border-width может принимать следующие типы значений:</p>
+           <ul>
+               <li>
+                Значения в единицах измерения, таких как em, px или cm
+               </li>
+<pre>
+    <code>
+border-width: 2px;
+    </code>
+</pre>
+            <li>
+                Одно из константных значений: thin (тонкая граница - 1px), medium (средняя по ширине - 3px), thick (толстая - 5px)
+            </li>
+<pre>
+    <code>
+border-width: medium;
+    </code>
+</pre>
+           </ul>
+           <p>Свойство border-color в качестве значения принимает цвет CSS:</p>
+<pre>
+    <code>
+    border-color: red;
+    </code>
+</pre>
+           <p>Свойство border-style оформляет тип линии границы и может принимать одно из следующих значений:</p>
+<pre>
+    <code>
+    border-color: red;
+    </code>
+</pre>
+        <ul>
+            <li>
+                none: граница отсутствует
+            </li>
+            <li>
+                solid: граница в виде обычной линии
+            </li>
+            <li>
+                dashed: штриховая линия
+            </li>
+            <li>
+                dotted: линия в виде последовательности точек
+            </li>
+            <li>
+                double: граница в виде двух параллельных линий
+            </li>
+            <li>
+                groove: граница имеет трехмерный эффект
+            </li>
+            <li>
+                inset: граница как бы вдавливается во внутрь
+            </li>
+            <li>
+                outset: аналогично inset, только граница как бы выступает наружу
+            </li>
+            <li>
+                ridge: граница также реализует трехмерный эффект
+            </li>
+        </ul>
+                <img src="img/Пример21.png" alt="">
+                <p>Например:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Блочная модель в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                div{
+                    width: 100px;
+                    height:100px;
+                    border-style: solid;
+                    border-color: red;
+                    border-width: 2px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div&gt;&lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;     
+    </code>
+</pre>
+               <img src="img/Пример22.png" alt="">
+               <p>При необходимости мы можем определить цвет, стиль и ширину границы для каждой из сторон используя следующие свойства:</p>
+<pre>
+    <code>
+    /* для верхней границы */
+    border-top-width
+    border-top-style
+    border-top-color
+         
+    /* для нижней границы */
+    border-bottom-width
+    border-bottom-style
+    border-bottom-color
+         
+    /* для левой границы */
+    border-left-width
+    border-left-style
+    border-left-color
+         
+    /* для правой границы */
+    border-right-width
+    border-right-style
+    border-right-color
+    </code>
+</pre>
+    </div>
+        </div>
+            </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Другие Статьи</h3>
+                <div class="section_text">
+                <p>Вместо установки по отдельности цвета, стиля и ширины границы мы можем использовать одно свойство - border:</p>
+<pre>
+    <code>
+    border: ширина стиль цвет
+    </code>
+</pre>
+                <p>Например:</p>
+<pre>
+    <code>
+    border: 2px solid red;
+    </code>
+</pre>
+                <p>Для установки границы для отдельных сторон можно использовать одно из свойств:</p>
+<pre>
+    <code>
+    border-top
+    border-bottom
+    border-left
+    border-right
+    </code>
+</pre>
+            <p>Их использование аналогично:</p>
+<pre>
+    <code>
+    border-top: 2px solid red;
+    </code>
+</pre>
+            </div>
+                </div>
+                    </div>
+    <div class="container">
+            <div class="section_header">
+            <h3 class="section_title">Радиус границы</h3>
+            <div class="section_text">
+            <p>Свойство border-radius позволяет округлить границу. Это свойство принимает значение радиуса в пикселях или единицах em.</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Блочная модель в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                div{
+                    width: 100px;
+                    height:100px;
+                    border: 2px solid red;
+                    border-radius: 30px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div&gt;&lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;    
+    </code>
+</pre>
+                <p>Теперь каждый угол будет скругляться по радиусу в 30 пикселей:</p>
+                <img src="img/Пример23.png" alt="">
+                <p>Так как у элемента может быть максимально четыре угла, то мы можем указать четыре значения для установки радиуса у каждого углов:</p>
+<pre>
+    <code>
+    border-radius: 15px 30px 5px 40px;
+    </code>
+</pre>
+                <p>Вместо общей установки радиусов для всех углов, можно их устанавливать по отдельности. Так, предыдущее значение border-radius можно переписать следующим образом:</p>
+<pre>
+    <code>
+    border-top-left-radius: 15px;   /* радиус для верхнего левого угла */
+    border-top-right-radius: 30px;  /* радиус для верхнего правого угла */
+    border-bottom-right-radius: 5px;    /* радиус для нижнего левого угла */
+    border-bottom-left-radius: 40px;    /* радиус для нижнего правого угла */
+    </code>
+</pre>
+                <p>Также border-radius поддерживает возможность создания эллиптических углов. То есть угол не просто скругляется, а использует два радиуса, образуя в итоге душу эллипса:</p>
+<pre>
+    <code>
+    border-radius: 40px/20px;
+    </code>
+</pre>
+                <p>В данном случае полагается, что радиус по оси X будет иметь значение 40 пикселей, а по оси Y - 20 пикселей.</p>
+    </div>
+            </div>
+                </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Цвет CSS.png" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Цвет в CSS.html">Цвет в CSS</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Обтекание CSS.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Обтекание текстом.html">Обтекание элементов</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/ФОн элемента.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Фон.html">Фон элемента</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

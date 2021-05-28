@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Я хотел бы знать лишь одно: что такое цвет?"</h1>
+                <h2 class="intro_subtitle">Пабло Пикассо</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Фон элемента</h3>
+             <div class="section_text"><p>Фон элемента описывается в CSS свойством background. Фактически это свойство представляет сокращение набора следующих свойств CSS:</p>
+            <ul>
+                <li>
+                    background-color: устанавливает цвет фона
+<pre>
+    <code>
+    background-color: #ff0507;
+    </code>
+</pre>
+                </li>
+                <li>
+                    background-image: в качестве фона устанавливается изображение
+<pre>
+    <code>
+	background-image: url(dubi.png);
+    </code>
+</pre>
+                <p>Это свойство принимает одно значение: ключевое слово url, после которого в скобках идет путь к файлу изображения. 
+                В данном случае имеется в виду, что в одной папке рядом с веб-страницей находится файл dubi.png.</p>
+                <p>Также можно использовать абсолютные адреса URL, например:</p>
+<pre>
+    <code>
+    background-image: url(http://localhost.com/someimage.png);
+    </code>
+</pre>
+                <p>Либо можно использовать относительные адреса - относительно html-документа или корневого каталога сайта:</p>
+<pre>
+    <code>
+    background-image: url(../images/someimage.png); /* путь относительно html-документа */
+    </code>
+</pre>
+                </li>
+                <li>
+                    background-repeat: устанавливает режим повторения фонового изображения по всей поверхности элемента
+                </li>
+                <li>
+                    background-position: указывает позицию фонового изображения
+                </li>
+                <li>
+                    background-attachment: устанавливает стиль прикрепления фонового изображения к элеме
+                </li>
+                <li>
+                    background-clip: определяет область, которая вырезается из изображения и используется в качестве фона
+                </li>
+                <li>
+                    background-origin: устанавливает начальную позицию фонового изображения
+                </li>
+           </ul>
+           <p>Например</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Блочная модель в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            div{
+                width: 250px;
+                height: 200px;
+                margin: 10px;
+            }
+                 
+            .colored{
+                background-color: #ff0507;
+            }
+                 
+            .imaged{
+                background-image: url(dubi.png);
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class="colored"&gt;Первый блок&lt;/div&gt;
+            &lt;div class="imaged"&gt;Второй блок&lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+           <p>Первый блок окрашен в оттенок красного цвета, а второй блок устанавливает в качестве фона изображение. Все содержимое блока накладывается поверх фона:</p>
+
+    </div>
+        </div>
+            </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Повторение изображения</h3>
+                <div class="section_text">
+                    На выше приведенном скриншоте видно, что CSS должным образом масштабирует изображение, чтобы наиболее оптимально вписать 
+                    его в пространство элемента. Однако в связи с масшатбированием изображение может не полностью покрывать поверхность элемента,
+                    и поэтому для полного покрытия автоматически CSS начинает повторять изображение.
+                <p>С помощью свойства background-repeat можно изменить механизм повторения. Оно может принимать следующие значения:</p>
+                <ul>
+                    <li>
+                        repeat-x: повторение по горизонтали
+                    </li>
+                    <li>
+                        repeat-y: повторение по вертикали
+                    </li>
+                    <li>
+                        repeat: повторение по обеим сторонам (действие по умолчанию)
+                    </li>
+                    <li>
+                        space: изображение повторяется для заполнения всей поверхности элемента, но без создания фрагментов
+                    </li>
+                    <li>
+                        round: изображение должным образом масштабируется для полного заполнения всего пространства
+                    </li>
+                    <li>
+                        no-repeat: изображение не повторяется
+                    </li>
+                </ul>
+                <p>Например:</p>
+<pre>
+    <code>
+    div{
+        width: 200px;
+        height: 150px;
+                     
+        background-image: url(dubi.png);
+        background-repeat: round;
+    }
+    </code>
+</pre>
+            </div>
+                </div>
+                    </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Размер изображения</h3>
+                <div class="section_text">
+                <p>Свойство background-size позволяет установить размер фонового изображения. Для установки размера можно использовать 
+                    либо единицы измерения, например, пиксели, либо проценты, либо одно из предустановленных значений:</p>
+                <ul>
+                    <li>
+                        contain: масштабирует изображение по наибольшей стороне, сохраняя аспектное отношение
+                    </li>
+                    <li>
+                        cover: масштабирует изображение по наименьшей стороне, сохраняя аспектное отношение
+                    </li>
+                    <li>
+                        auto: значение по умолчанию, изображение отображается в полный размер
+                    </li>
+                </ul>
+                <p>Если нужно масштабировать изображение таким образом, чтобы оно оптимальнее было вписано в фон, 
+                то для обеих настроек можно установить значение 100%:</p>
+<pre>
+    <code>
+    background-size: 100% 100%;
+    </code>
+</pre>
+                <p>Если задаются точные размеры, то вначале указывается ширина, а потом высота изображения:</p>
+<pre>
+    <code>
+    background-size: 200px 150px;   /* ширина 200 пикселей, высота 150 пикселей */
+    </code>
+</pre>
+                <p>Можно задать точное значение для одного измерения - ширины или высоты, 
+                а для другого задать автоматические размеры, чтобы браузер сам выводил точные значения:</p>
+<pre>
+    <code>
+    background-size: 200px auto;    /* ширина 200 пикселей, автоматическая высота */
+    </code>
+</pre>
+                <p>Например:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Блочная модель в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            div{
+                width: 200px;
+                height: 150px;
+                margin: 10px;
+             
+                border: black solid 1px;
+                background-image: url(dubi.png);
+             
+            }
+            .imaged1{
+             
+                background-size: cover;
+            }
+            .imaged2{
+             
+                background-size: 140px 110px;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class="imaged1"&gt;&lt;/div&gt;
+            &lt;div class="imaged2"&gt;&lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+            <p>Во втором случае изображение будет масштабироваться до размеров 140х110. 
+            Поскольку у нас еще остается место на элементе, то по умолчанию изображение будет повторяться для заполнения всей поверхности:</p>
+            </div>
+                </div>
+                    </div>
+    <div class="container">
+            <div class="section_header">
+            <h3 class="section_title">Позиция изображения</h3>
+            <div class="section_text">
+            <p>Свойство background-position управляет позицией фонового изображения внутри элемента. 
+            Оно может принимать отступы от верхнего левого угла элемента в единицах измерения, например, в пикселях в следующем формате:</p>
+<pre>
+    <code>
+	background-position: отступ_по_оси_X отступ_по_оси_Y;       
+    </code>
+</pre>
+                <p>Например:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Блочная модель в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            div{
+                width: 300px;
+                height: 250px;
+                margin: 10px;
+                     
+                border: 1px solid #ccc;
+                background-color: #eee;
+                background-image: url(dubi.png);
+                background-repeat: no-repeat;
+                background-position: 20px 15px;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div&gt;Туман начинал расходиться, и неопределенно, верстах в двух расстояния, виднелись уже неприятельские
+                войска на противоположных возвышенностях...&lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+                <p>Кроме того, данное свойство может принимать одно из следующих значений:</p>
+                <ul>
+                    <li>
+                        top: выравнивание по верхнему краю элемента
+                    </li>
+                    <li>
+                        left: выравнивание по левому краю элемент
+                    </li>
+                    <li>
+                        right: выравнивание по правому краю элемента
+                    </li>
+                    <li>
+                        bottom: выравнивание по нижнему краю элемента
+                    </li>
+                    <li>
+                        center: изображение располагается по центру элемента
+                    </li>
+                </ul>
+                <p>Например:</p>
+<pre>
+    <code>
+    background-position: top right; 
+    </code>
+</pre>
+                <p>Здесь изображение выравнивается по верху и правому краю, то есть будет располагаться в правом верхнем углу элемента.</p>
+    </div>
+            </div>
+                </div>
+                <div class="container">
+                <div class="section_header">
+                     <h3 class="section_title">background-origin</h3>
+                     <div class="section_text">
+                        Свойство background-origin указывает позицию на изображении, 
+                        с которой будет начинаться собственно фоновое изображение для элемента. Оно может принимать следующие значения:
+                        <ul>
+                            <li>
+                                border-box: фон у элемента устанавливается начиная с его внешней границы, определяемой свойством border
+                            </li>
+                            <li>
+                                padding-box: фон устанавливается с учетом внутренних отступов
+                            </li>
+                            <li>
+                                content-box: фон устанавливается по содержимому элемента
+                            </li>
+                        </ul>
+                        <p>Используем все три значения:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Блочная модель в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            div{
+                width: 200px;
+                height: 200px;
+                margin: 10px;
+                display: inline-block;  /* располагаем блоки в ряд */
+                color: #eee;
+                 
+                padding:15px;
+                border: 15px solid rgba(23,23,23,0.2);
+                 
+                background-image: url(cats.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .borderBox {background-origin: border-box;}
+            .paddingBox {background-origin: padding-box;}
+            .contentBox {background-origin: content-box;}
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class="borderBox"&gt;
+                Вся власть - котикам!
+            &lt;/div&gt;
+            &lt;div class="paddingBox"&gt;
+                Вся власть - котикам!
+            &lt;/div&gt;
+            &lt;div  class="contentBox"&gt;
+                Вся власть - котикам!
+            &lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+        
+        
+        
+    </code>
+</pre>
+                </div>
+                    </div> 
+                        </div>
+                        <div class="container">
+                            <div class="section_header">
+                                 <h3 class="section_title">background-attachment</h3>
+                                 <div class="section_text">
+                                    Свойство background-attachment управляет, как фоновое изображение будет прикреплено к элементу. 
+                                    Это свойство может принимать следующие значения:
+                                    <ul>
+                                        <li>
+                                            fixed: фон элемента фиксирован вне зависимости от прокрутки внутри элемента
+                                        </li>
+                                        <li>
+                                            local: по мере прокрутки внутри элемента фон изменяется
+                                        </li>
+                                        <li>
+                                            scroll: фон фиксирован и не меняется при прокрутке,
+                                            но в отличие от fixed несколько элементов могут использовать свой фон, тогда как при fixed создается один фон для всех элементов
+                                        </li>
+                                    </ul>
+                                    <p>Например:</p>
+<pre>
+    <code>
+    div{
+        width: 300px;
+        height: 250px;
+         
+                 
+        overflow:scroll;    /* добавляем прокрутку  */
+        border: 1px solid #ccc;
+         
+        background-image: url(dubi.png);
+        background-size: 512px 384px;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+    }
+    </code>
+</pre>
+                            </div>
+                                </div> 
+                                    </div>
+    <div class="container">
+    <div class="section_header">
+        <h3 class="section_title">background-clip</h3>
+            <div class="section_text">
+                Свойство background-clip определяет, какая часть изображения используется для фона. Он принимает те же значения:
+                <ul>
+                    <li>
+                        border-box: изображение обрезается по границам элемента
+                    </li>
+                    <li>
+                        padding-box: из изображения исключается та часть, которая находится под границами элемента
+                    </li>
+                    <li>
+                        content-box: изображение обрезается по содержимому с учетом внутренних отступов
+                    </li>
+                </ul>
+          
+    </div>
+        </div> 
+            </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Свойство background</h3>
+                        <div class="section_text">
+                            Свойство background по сути является сокращением всех ранее рассмотренных свойств CSS в формате:
+<pre>
+    <code>
+    background: &lt;background-color&gt; &lt;background-position&gt; &lt;background-size&gt;
+    &lt;background-repeat&gt; &lt;background-origin&gt; &lt;background-clip&gt; &lt;background-attachment&gt;
+    &lt;background-image&gt;            
+    </code>
+</pre>
+                    <p>Например, если у нас есть следующий набор свойств:</p>
+<pre>
+    <code>
+    background-image: url(cats.jpg);
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin: border-box;
+    background-attachment: local;
+    </code>
+</pre>
+                    <p>То мы их можем сократить следующим образом:</p>
+<pre>
+    <code>
+    background: #eee no-repeat border-box local url(cats.jpg);
+    </code>
+</pre>
+                      
+                                        </div>
+                                            </div> 
+                                                </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Цвет CSS.png" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Цвет в CSS.html">Цвет в CSS</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Обтекание CSS.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Обтекание текстом.html">Обтекание элементов</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/Границы CSS.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Границы.html">Границы</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

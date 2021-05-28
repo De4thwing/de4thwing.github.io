@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Все мы — это части одного большого витража. Яркие стеклышки, преломляющие свет абсолютного гения. Каждый уникален и несет свой неповторимый цвет в этот мир."</h1>
+                <h2 class="intro_subtitle">Роман Подзоров</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Обтекание элементов</h3>
+             <div class="section_text"><p>Как правило, все блоки и элементы на веб-странице в браузере появляются в том порядке, в каком они определены в коде html. Однако CSS предоставляет специальное свойство float, которое позволяет 
+                установить обтекание элементов, благодаря чему мы можем создать более интересные и разнообразные по своему дизайну веб-страницы.</p>
+            <p>Это свойство может принимать одно из следующих значений:</p>
+            <ul>
+                <li>
+                    left: элемент перемещается влево, а все содержимое, которое идет ниже его, обтекает правый край элемента
+                </li>
+                <li>
+                    right: элемент перемещается вправо
+                </li>
+                <li>
+                    none: отменяет обтекание и возвращает объект в его обычную позицию
+                </li>
+            </ul>
+
+
+           <p>При применении свойства float для стилизуемых элементов, кроме элемента img, рекомендуется установить свойство width.</a></p>
+           <p>Итак, представим, что нам надо на странице вывести слева от основного текста изображение, справа должен быть сайдбар, а все остальное место должно быть занято основным текстом статьи.
+            Определим интерфейс страницы сначала без свойства float:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Обтекание в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                 
+            .image {
+                margin:10px;
+                margin-top:0px;
+            }
+            .sidebar{
+                border: 2px solid #ccc;
+                background-color: #eee;
+                width: 150px;
+                padding: 10px;
+                margin-left:10px;
+                font-size: 20px;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div&gt;
+                &lt;div class="sidebar"&gt;Л. Толстой. Война и мир. Том второй. Часть третья&lt;/div&gt;
+                &lt;img src="dubi.png" class="image" alt="Война и мир" /&gt;
+                &lt;p&gt;Старый дуб, весь преображенный, раскинувшись шатром сочной, темной зелени, млел,
+                чуть колыхаясь в лучах вечернего солнца...&lt;/p&gt;
+                &lt;p&gt;«Нет, жизнь не кончена в 31 год, – вдруг окончательно, беспеременно решил князь Андрей...&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;        
+    </code>
+</pre>
+                
+            <p>В данном случае мы получим последовательное размещение элементов на странице:</p>
+            <p>Теперь на той же странице применим свойство float, изменив стили следующим образом</p>
+<pre>
+    <code>
+    .image { 
+        float:left; /* обтекание слева */
+        margin:10px;
+        margin-top:0px;
+    }
+    .sidebar{
+        border: 2px solid #ccc;
+        background-color: #eee;
+        width: 150px;
+        padding: 10px;
+        margin-left:10px;
+        font-size: 20px;
+        float: right; /* обтекание справа */
+    }
+    </code>
+</pre>
+                <p>Соответственно изменится и размещение элементов на странице:</p>
+                <img src="img/Пример20.png" alt="">
+                <p>Элементы, к которым применяется свойство float, еще называют floating elements или плавающими элементами.</p>
+                <p>Запрет обтекания. Свойство clear</p>
+                <p>Иногда возникает необходимость запретить обтекания. Подобная задача может быть актуальна, 
+                если какой-то блок должен переноситься вниз на новую строку, а не обтекать плавающий элемент. Например, 
+                футер, как правило, должен находиться строго внизу и растягиваться по всей ширине страницы. 
+                Если же перед футером находится плавающий элемент, 
+                то футер может обтекать этот элемент, что не желательно.</p>
+                <p>Для запрета обтекания элементов в CSS применяется свойство clear, которое указывает браузеру, 
+                что к стилизуемому элементу не должно применяться обтекание.</p>
+                <p>Свойство clear может принимать следующие значения:</p>
+                <ul>
+                    <li>
+                        left: стилизуемый элемент может обтекать плавающий элемент справа. Слева же обтекание не работает
+                    </li>
+                    <li>
+                        right: стилизуемый элемент может обтекать плавающий элемент только слева. А справа обтекание не работает
+                    </li>
+                    <li>
+                        both: стилизуемый элемент может обтекать плавающие элементы и относительно них смещается вниз
+                    </li>
+                    <li>
+                        both: стилизуемый элемент может обтекать плавающие элементы и относительно них смещается вниз
+                    </li>
+                </ul>
+                <p>Например, пусть на веб-странице будет определен футер:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Обтекание в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            .image {
+                float:left;
+                margin:10px;
+                margin-top:0px;
+            }
+            .footer{
+                border-top: 1px solid #ccc;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+             
+            &lt;img src="dubi.png" class="image" alt="Дубы" /&gt;
+            &lt;div class="footer"&gt;Copyright © MyCorp. 2016&lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;   
+    </code>
+</pre>
+                <p>Изменим стиль футера:</p>
+<pre>
+    <code>
+    .footer{
+        border-top: 1px solid #ccc;
+        clear: both;
+    }
+    </code>
+</pre>
+                <p>Теперь футер не будет обтекать изображение, а будет уходить вниз.</p>
+                <img src="img/Пример221.jpg" alt="">
+    </div>
+        </div>
+            </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Цвет CSS.png" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Цвет в CSS.html">Цвет в CSS</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Границы CSS.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Цвет в CSS.html">Границы</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/ФОн элемента.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Фон.html">Фон элемента</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

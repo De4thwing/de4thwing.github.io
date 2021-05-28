@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Планета вращается, знаете ли. Можно вращаться вместе с ней, а можно зацепиться за что-то и протестовать, но тогда тебя свалит с ног."</h1>
+                <h2 class="intro_subtitle">Стивен Кинг</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Стилизация таблиц</h3>
+             <div class="section_text"><p>CSS предоставляет ряд свойств, которые помогают стилизовать таблицу:</p>
+                <ul>
+                    <li>
+                        border-collapse: устанавливает, как будет стилизоваться граница смежных ячеек
+                    </li>
+                    <li>
+                        border-spacing: устанавливает промежутки между границами смежных ячеек
+                    </li>
+                    <li>
+                        caption-side: устанавливает положение элемента captio
+                    </li>
+                    <li>
+                        empty-cells: задает режим отрисовки для пустых ячеек
+                    </li>
+                    <li>
+                        table-layout: определяет размеры таблицы
+                    </li>
+                </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Установка таблицы</h3>
+            <div class="section_text">
+                Ранее для установки границы в таблице широко использовался атрибут border, например:
+                <ul>
+                    <li>
+                        medium: базовый размер шрифта браузера (16 пикселей)
+                    </li>
+                    <li>
+                        small: 13 пикселей
+                    </li>
+                    <li>
+                        x-small: 10 пикселей
+                    </li>
+                    <li>
+                        xx-small: 9 пикселей
+                    </li>
+                    <li>
+                        large: 18 пикселей
+                    </li>
+                    <li>
+                        x-large: 24 пикселя
+                    </li>
+                    <li>
+                        xx-large: 32 пикселя
+                    </li>
+                </ul>
+                <p>Например:</p>
+<pre>
+    <code>
+        &lt;table border="2px"&gt;
+    </code>
+</pre>
+                <p>Сейчас же тенденция для стилизации использовать только стили CSS, 
+                    поэтому граница также задается через CSS с помощью стандартного свойства border:</p>
+<pre>
+    <code>
+    table {
+        border: 1px solid #ccc;  /* граница всей таблицы */
+    }
+    tr {
+        border: 1px solid #ccc;  /* границы между строками */
+    }
+    td, th {
+        border: 1px solid #ccc;  /* границы между столбцами */
+    }
+    </code>
+</pre>
+            <p>При установке границ между столбцами с помощью свойства border-collapse можно установить общую или раздельную границу между смежными ячейками:</p>
+            <ul>
+                <li>
+                    collapse: смежные ячейки имеют общую границу
+                </li>
+                <li>
+                    separate: смежные ячейки имеют отдельные границы, которые разделяются пространством
+                </li>
+            </ul>
+            <p>Если смежные ячейки имеют раздельные границы, то с помощью свойства border-spacing можно установить пространство между границами:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стилизаци таблиц в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            table {
+                border: 1px solid #ccc;
+                border-spacing: 3px;
+            }
+                 
+            td, th{
+                border: solid 1px #ccc;
+            }
+            .collapsed{
+                border-collapse: collapse;
+            }
+            .separated{
+                border-collapse: separate;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h3&gt;Collapse&lt;/h3&gt;
+            &lt;table class="collapsed"&gt;
+                &lt;tr&gt;&lt;th&gt;Модель&lt;/th&gt;&lt;th&gt;Производитель&lt;/th&gt;&lt;th&gt;Цена&lt;/th&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Lumia 950&lt;/td&gt;&lt;td&gt;Microsoft&lt;/td&gt;&lt;td&gt;29900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;iPhone 6S&lt;/td&gt;&lt;td&gt;Apple&lt;/td&gt;&lt;td&gt;52900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Nexus 6P&lt;/td&gt;&lt;td&gt;Huawei&lt;/td&gt;&lt;td&gt;49000&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;h3&gt;Separate&lt;/h3&gt;
+            &lt;table class="separated"&gt;
+                &lt;tr&gt;&lt;th&gt;Модель&lt;/th&gt;&lt;th&gt;Производитель&lt;/th&gt;&lt;th&gt;Цена&lt;/th&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;G 5&lt;/td&gt;&lt;td&gt;LG&lt;/td&gt;&lt;td&gt;44900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;HTC 10&lt;/td&gt;&lt;td&gt;HTC&lt;/td&gt;&lt;td&gt;49900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Nexus 5X&lt;/td&gt;&lt;td&gt;Google/LG&lt;/td&gt;&lt;td&gt;25000&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;        
+    </code>
+</pre>
+            <img src="img/Пример36.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Пустые ячейки</h3>
+            <div class="section_text">
+                Свойство empty-cells позволяет стилизовать пустые ячейки с помощью одного из следующих значений:
+                <ul>
+                    <li>
+                        show: пустые ячейки отображаются, значение по умолчанию
+                    </li>
+                    <li>
+                        hide: пустые ячейки не отображаются
+                    </li>
+                </ul>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стилизаци таблиц в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            table {
+                border: 1px solid #ccc;
+                border-spacing: 3px;
+            }
+                 
+            td, th{
+                border: solid 1px #ccc;
+            }
+            .hidden-empty-cells{
+                empty-cells: hide;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h3&gt;Show&lt;/h3&gt;
+            &lt;table&gt;
+                &lt;tr&gt;&lt;th&gt;Модель&lt;/th&gt;&lt;th&gt;Производитель&lt;/th&gt;&lt;th&gt;Цена&lt;/th&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Lumia 950&lt;/td&gt;&lt;td&gt;Microsoft&lt;/td&gt;&lt;td&gt;29900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;iPhone 6S&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Nexus 6P&lt;/td&gt;&lt;td&gt;Huawei&lt;/td&gt;&lt;td&gt;49000&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;h3&gt;Hide&lt;/h3&gt;
+            &lt;table class="hidden-empty-cells"&gt;
+                &lt;tr&gt;&lt;th&gt;Модель&lt;/th&gt;&lt;th&gt;Производитель&lt;/th&gt;&lt;th&gt;Цена&lt;/th&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;G 5&lt;/td&gt;&lt;td&gt;LG&lt;/td&gt;&lt;td&gt;44900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;HTC 10&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Nexus 5X&lt;/td&gt;&lt;td&gt;Google/LG&lt;/td&gt;&lt;td&gt;25000&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;        
+    </code>
+</pre>
+            <img src="img/ПРимер37.png" alt="">
+            
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Позиционирование заголовка</h3>
+             <div class="section_text">
+                Свойство caption-side управляет позицией заголовка и может принимать следующие значения:
+                <ul>
+                    <li>
+                        top: позиционирование заголовка вверху (значение по умолчанию)
+                    </li>
+                    <li>
+                        bottom: позиционирование заголовка внизу
+                    </li>
+                </ul>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стилизаци таблиц в CSS3&lt;/title&gt;
+            &lt;style&gt;
+            table {
+                border: 1px solid #ccc;
+                border-spacing: 3px;
+            }
+                 
+            caption {
+                 
+                font-weight: bold;
+            }
+                 
+            td, th{
+                border: solid 1px #ccc;
+            }
+            .captionBottom{
+                caption-side: bottom;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h3&gt;Top&lt;/h3&gt;
+            &lt;table&gt;
+                &lt;caption&gt;Флагманы 2015 года&lt;/caption&gt;
+                &lt;tr&gt;&lt;th&gt;Модель&lt;/th&gt;&lt;th&gt;Производитель&lt;/th&gt;&lt;th&gt;Цена&lt;/th&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Lumia 950&lt;/td&gt;&lt;td&gt;Microsoft&lt;/td&gt;&lt;td&gt;29900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;iPhone 6S&lt;/td&gt;&lt;td&gt;Apple&lt;/td&gt;&lt;td&gt;52900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Nexus 6P&lt;/td&gt;&lt;td&gt;Huawei&lt;/td&gt;&lt;td&gt;49000&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;h3&gt;Bottom&lt;/h3&gt;
+            &lt;table class="captionBottom"&gt;
+                &lt;caption&gt;Новинки 2016 года&lt;/caption&gt;
+                &lt;tr&gt;&lt;th&gt;Модель&lt;/th&gt;&lt;th&gt;Производитель&lt;/th&gt;&lt;th&gt;Цена&lt;/th&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;G 5&lt;/td&gt;&lt;td&gt;LG&lt;/td&gt;&lt;td&gt;44900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;HTC 10&lt;/td&gt;&lt;td&gt;HTC&lt;/td&gt;&lt;td&gt;49900&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;iPhone SE&lt;/td&gt;&lt;td&gt;Apple&lt;/td&gt;&lt;td&gt;37000&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+    </div>
+        </div>
+            </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Управление размером таблицы</h3>
+            <div class="section_text">
+                С помощью свойства table-layout можно управлять размером таблицы. По умолчанию это свойство имеет значение auto, при котором браузер устанавливает ширину столбцов таблицы автоматически, исходя из ширины самой широкой ячейки в столбце. 
+                А из ширины отдельных столбцов складывается ширина всей таблицы.
+                <p>Однако с помощью другого значения - fixed можно установить фиксированную ширину:</p>
+<pre>
+    <code>
+    table {
+        border: 1px solid #ccc;
+        border-spacing: 3px;
+        table-layout: fixed;
+        width:350px; 
+    }
+    </code>
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_header">Вертикальное выравнивание ячеек</h3>
+            <div class="section_text">
+                Как правило, содержимое ячеек таблицы выравнивается по центру ячейки.
+                Но с помощью свойства vertical-align это поведение можно переопределить. Это свойство принимает следующие значения:
+                <ul>
+                    <li>
+                        top: выравнивание содержимого по верху ячейки
+                    </li>
+                    <li>
+                        baseline: выравнивание первой строки текста по верху ячейки
+                    </li>
+                    <li>
+                        middle: выравнивание по центру (значение по умолчанию)
+                    </li>
+                    <li>
+                        bottom: выравнивание по низу
+                    </li>
+                </ul>
+<pre>
+    <code>
+    td, th{
+        border: solid 1px #ccc;
+        vertical-align: bottom;
+        height: 30px;
+    }
+    </code>
+</pre>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="section">
+    <div class="copyright">
+        <div class="container">
+            <div class="section_header">
+                <h3 class="section_title">Стилизация списков</h3>
+                <div class="section_text">
+                    CSS предоставляет специальные свойства по стилизации списков. Одним из таких свойств является list-style-type.
+                    Оно может принимать следующие значения для нумерованных списков:
+                    <ul>
+                        <li>
+                            decimal: десятичные числа, отсчет идет от 1
+                        </li>
+                        <li>
+                            decimal-leading-zero: десятичные числа, которые предваряются нулем, например, 01, 02, 03, … 98, 99
+                        </li>
+                        <li>
+                            lower-roman: строчные латинские цифры, например, i, ii, iii, iv, v
+                        </li>
+                        <li>
+                            upper-roman: заглавные латинские цифры, например, I, II, III, IV, V…
+                        </li>
+                        <li>
+                            lower-alpha: строчные латинские буквы, например, a, b, c..., z
+                        </li>
+                        <li>
+                            upper-alpha: заглавные латинские буквы, например, A, B, C, … Z
+                        </li>
+                    </ul>
+                    <p>Для ненумерованных списков:</p>
+                    <ul>
+                        <li>
+                            disc: черный диск
+                        </li>
+                        <li>
+                            circle: пустой кружочек
+                        </li>
+                        <li>
+                            square: черный квадратик
+                        </li>
+                    </ul>
+                    <p>Например</p>
+<pre>
+    <code>
+    ul{
+        list-style-type: square;
+    }
+    </code>
+</pre>
+                <img src="img/Пример38.png" alt="">
+                <p>Чтобы вообще отключить маркеры у элементов списка, используется значение none:</p>
+<pre>
+    <code>
+    ul{
+        list-style-type: none;
+    }
+    </code>
+</pre>
+                <p>Данное свойство может применяться как ко всему списку, так и к отдельным элементам. Например:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стилизация списков в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                     
+                .decimal{
+                    list-style-type: decimal;
+                }
+                ol{
+                    list-style-type: lower-roman;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;ol&gt;
+                &lt;li&gt;Элемент 1&lt;/li&gt;
+                &lt;li class="decimal"&gt;Элемент 2&lt;/li&gt;
+                &lt;li&gt;Элемент 3&lt;/li&gt;
+                &lt;li&gt;Элемент 4&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;        
+    </code>
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">list-style-position</h3>
+            <div class="section_text">
+                Веб-браузеры обычно отображают маркеры списка слева от элементов списка.
+                С помощью свойства list-style-position мы можем настроить их позиционирование.
+                Это свойство принимает два значения: outside (по умолчанию) и inside (обеспечивает равномерное распределение по ширине).
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стилизация списков в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                     
+                ul.outside{
+                    list-style-position: outside;
+                }
+                ul.inside{
+                    list-style-position: inside;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h3&gt;Inside&lt;/h3&gt;
+            &lt;ul class="inside"&gt;
+                &lt;li&gt;
+                Он стал прислушиваться и услыхал звуки приближающегося топота лошадей и звуки голосов...
+                &lt;/li&gt;
+                &lt;li&gt;
+                Он стал прислушиваться и услыхал звуки приближающегося топота лошадей и звуки голосов...
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Outside&lt;/h3&gt;
+            &lt;ul class="outside"&gt;
+                &lt;li&gt;
+                Он стал прислушиваться и услыхал звуки приближающегося топота лошадей и звуки голосов...&lt;
+                /li&gt;
+                &lt;li&gt;
+                Он стал прислушиваться и услыхал звуки приближающегося топота лошадей и звуки голосов...
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+                <img src="img/Пример39.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">list-style-image</h3>
+            <div class="section_text">
+                Свойство list-style-image позволяет задать в качестве маркера изображение:
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стилизация списков в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                ul{
+                    list-style-image:url(phone_touch.png);
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;ul&gt;
+                &lt;li&gt;iPhone 6S&lt;/li&gt;
+                &lt;li&gt;Galaxy S7&lt;/li&gt;
+                &lt;li&gt;Nexus 5X&lt;/li&gt;
+                &lt;li&gt;Lumia 950&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;        
+    </code>
+</pre>
+                <img src="img/Пример41.png" alt="">
+                <p>Свойство list-style-image в качестве значения принимает путь к изображению url(phone_touch.png), где "phone_touch.png" - это название файла изображения.
+                    То есть в данном случае предполагается, что в одной папке с веб-страницей находится файл изображения phone_touch.png.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Абзац.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Абазцы.html">Стилизация абзацев</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Шрифт3.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Форматирование1.html">Форматирование текста</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/Цвет CSS.png" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Цвет.html">Цвет</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

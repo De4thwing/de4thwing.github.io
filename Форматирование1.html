@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Мы сочиняем ужасы, чтобы помочь себе справиться с реальностью. "</h1>
+                <h2 class="intro_subtitle">Стивен Кинг</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+            <h3 class="section_title">Форматирование текста</h3>
+            <div class="section_text"><p><strong>text-transform</strong></p>
+            <p>Свойство text-transform изменяет регистр текста. Оно может принимать следующие значения:</p>
+            <ul>
+                <li>
+                    capitalize: делает первую букву слова заглавной
+                </li>
+                <li>
+                    uppercase: все слово переводится в верхний регистр
+                </li>
+                <li>
+                    lowercase: все слово переводится в нижний регистр
+                </li>
+                <li>
+                    none: регистр символов слова никак не изменяется
+                </li>
+            </ul>
+            <p>Например:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Шрифты в CSS3&lt;/title&gt;
+                 
+            &lt;style&gt;
+                p.lowercase {text-transform: lowercase;}
+                p.uppercase {text-transform: uppercase;}
+                p.capitalize { text-transform: capitalize;}
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;div&gt;
+            &lt;p class="capitalize"&gt;Текст использует значение capitalize&lt;/p&gt;
+            &lt;p class="lowercase"&gt;Текст использует значение lowercase&lt;/p&gt;
+            &lt;p class="uppercase"&gt;Текст использует значение uppercase&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Свойство text-decoration</h3>
+            <div class="section_text">
+                Свойство text-decoration позволяет добавить к тексту некоторые дополнительные эффекты. 
+                Это свойство может принимать следующие значения:
+                <ul>
+                    <li>
+                        underline: подчеркивает текс
+                    </li>
+                    <li>
+                        overline: надчеркивает текст, проводит верхнюю линию
+                    </li>
+                    <li>
+                        line-through: зачеркивает текст
+                    </li>
+                    <li>
+                        none: к тексту не применяется декорирование
+                    </li>
+                </ul>
+                <p>Например:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Шрифты в CSS3&lt;/title&gt;
+                 
+            &lt;style&gt;
+                p.under {
+                    text-decoration: underline;
+                }
+                p.over {
+                    text-decoration: overline;
+                }
+                p.line {
+                    text-decoration: line-through;
+                }
+                p.mixed {
+                    text-decoration: underline line-through;
+                }
+                a.none {
+                    text-decoration: none;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;div&gt;
+            &lt;p class="under"&gt;Это подчеркнутый текст.&lt;/p&gt;
+            &lt;p class="over"&gt;Это надчеркнутый текст&lt;/p&gt;
+            &lt;p class="line"&gt;Это зачеркнутый текст&lt;/p&gt;
+            &lt;p class="mixed"&gt;Это подчеркнутый и зачеркнутый текст&lt;/p&gt;
+            &lt;p&gt;Не подчеркнутая &lt;a href="index.php" class="none"&gt;ссылка&lt;a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+            <img src="img/Пример29.png" alt="">
+            <p>При необходимости мы можем комбинировать значения. Так, в предпоследнем случае применялся стиль:</p>
+<pre>
+    <code>
+    p.mixed { text-decoration: underline line-through; }
+    </code>
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Межсимвольный интервал</h3>
+            <div class="section_text">
+                Два свойства CSS позволяют управлять интервалом между символами и словами текста.
+                Для межсимвольного интервала применяется атрибут letter-spacing, а для интервала между словами - word-spacing:
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Шрифты в CSS3&lt;/title&gt;
+                 
+            &lt;style&gt;
+                p.smallLetterSpace {
+                    letter-spacing: -1px;
+                }
+                p.bigLetterSpace {
+                    letter-spacing: 1px;
+                }
+                p.smallWordSpace{
+                    word-spacing: -1px;
+                }
+                p.bigWordSpace{
+                    word-spacing: 1px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;div&gt;
+            &lt;h3&gt;Обычный текст&lt;/h3&gt;
+            &lt;p&gt;Над ним не было ничего уже, кроме неба...&lt;/p&gt;
+            &lt;h3&gt;letter-spacing: -1px;&lt;/h3&gt;
+            &lt;p class="smallLetterSpace"&gt;Над ним не было ничего уже, кроме неба...&lt;/p&gt;
+            &lt;h3&gt;letter-spacing: 1px;&lt;/h3&gt;
+            &lt;p class="bigLetterSpace"&gt;Над ним не было ничего уже, кроме неба...&lt;/p&gt;
+            &lt;h3&gt;word-spacing: -1px&lt;/h3&gt;
+            &lt;p class="smallWordSpace"&gt;Над ним не было ничего уже, кроме неба...&lt;/p&gt;
+            &lt;h3&gt;word-spacing: 1px&lt;/h3&gt;
+            &lt;p class="bigWordSpace"&gt;Над ним не было ничего уже, кроме неба...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+            <img src="img/Пример30.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">text-shadow</h3>
+             <div class="section_text">
+                С помощью свойства text-shadow можно создать тени для текста. Для этого свойства необходимо задать четыре значения: 
+                горизонтальное смещение тени относительно текста, вертикальное смещение тени относительно текста,
+                степень размытости тени и цвет отбрасываемой тени. Например:
+<pre>
+    <code>
+    h1{
+        text-shadow: 5px 4px 3px #999;
+    }
+    </code>
+</pre>
+                <img src="img/Пример31.png" alt="">
+                <p>В данном случае горизонтальное смещение тени относительно букв составляет 5 пикселей, 
+                а вертикальное смещение вниз - 4 пикселя. Степень размытости - 3 пикселя, и для тени используется цвет #999.</p>
+                <p>Если нам надо было бы создать горизонтальное смещение влево, а не вправо, как по умолчанию, то в этом случае надо было бы использовать отрицательное значение.
+                Аналогично для создания вертикального смещения вверх также надо использовать отрицательное значение. Например:</p>
+<pre>
+    <code>
+    h1{
+        text-shadow: -5px -4px 3px #999;
+    }
+    </code>
+</pre>
+                <img src="img/Пример32.png" alt="">
+
+    </div>
+        </div>
+            </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Шрифт CSS.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Шрифт.html">Шрифт</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Абзац.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Внешнеи шрифты.html">Стилизация абзацев</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/Таблица.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Цвет.html">Стилизация списков и таблиц</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

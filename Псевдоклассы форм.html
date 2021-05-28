@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Когда я не знаю, что делать, я использую синий цвет"</h1>
+                <h2 class="intro_subtitle">Вим Кроувел</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+            <h3 class="section_title">Псевдоклассы форм</h3>
+            <div class="section_text"><p>Ряд псевдоклассов используется для работы с элементами форм:</p>
+                <ul>
+                    <li>
+                    <strong>:enabled:</strong> выбирает элемент, если он доступен для выбора (то есть у него не установлен атрибут disabled)
+                    </li>
+                    <li>
+                    <strong>:disabled:</strong> выбирает элемент, если он не доступен для выбора (то есть у него установлен атрибут disabled)
+                    </li>
+                    <li>
+                       <strong>checked:</strong>выбирает элемент, если у него установлен атрибут checked (для флажков и радиокнопок)
+                    </li>
+                    <li>
+                        <strong>:default:</strong>выбирает элементы по умолчанию
+                    </li>
+                    <li><strong>:valid:</strong> выбирает элемент, если его значение проходит валидацию HTML5
+                    </li>
+                    <li>
+                        <strong>:invalid:</strong> выбирает элемент, если его значение не проходит валидацию
+                    </li>
+                    <li>
+                        <strong>:in-range:</strong> выбирает элемент, если его значение находится в определенном диапазоне (для элементов типа ползунка)
+                    </li>
+                    <li>
+                        <strong>:out-of-range:</strong> выбирает элемент, если его значение не находится в определенном диапазоне
+                    </li>
+                    <li>
+                        <strong>:required:</strong>выбирает элемент, если у него установлен атрибут required
+                    </li>
+                    <li>
+                        <strong>:optional:</strong>выбирает элемент, если у него не установлен атрибут required
+                    </li>
+                </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Псевдоклассы enabled и disabled</h3>
+            <div class="section_text">
+            <p>Псевдоклассы enabled и disabled выбирают элементы форм в зависимости от того, установлен ли у них атрибут <strong>disabled:</strong></p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Селекторы в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                :enabled {
+                    border: 2px black solid;
+                    color: red;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;&lt;input type="text" value="Enabled" /&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;input type="text" disabled value="Disabled" /&gt;&lt;/p&gt;
+        &lt;/body&gt;
+     &lt;/html&gt;
+    </code>
+</pre>
+            <img src="img/Пример10.png" alt="">
+    </div>
+        </div>
+            </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Псевдокласс checked</h3>
+                    <div class="section_text"><p>Псевдокласс  <strong>checked </strong> стилизует элементы формы, у которых установлен атрибут checked:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Селекторы в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                :checked + span {
+                    color: red;
+                    font-weight: bold;  /* выделение жирным */
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+                &lt;h2&gt;Выберите технологию&lt;/h2&gt;
+                &lt;p&gt;
+                    &lt;input type="checkbox" checked name="html5"/&gt;&lt;span&gt;HTML5&lt;/span&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;input type="checkbox" name="dotnet"/&gt;&lt;span&gt;.NET&lt;/span&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;input type="checkbox" name="java"/&gt;&lt;span&gt;Java&lt;/span&gt;
+                &lt;/p&gt;
+                     
+                &lt;h2&gt;Укажите пол&lt;/h2&gt;
+                &lt;p&gt;
+                    &lt;input type="radio" value="man" checked name="gender"/&gt;&lt;span&gt;мужской&lt;/span&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;input type="radio" value="woman" name="gender"/&gt;&lt;span&gt;женский&lt;/span&gt;
+                &lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+                <p>Селектор :checked + span позволяет выбрать элемент, соседний с отмеченным элементом формы.</p>
+                <img src="img/Пример11.png" alt="">
+            </div>
+                </div>
+                    </div>
+                    <div class="container">
+                        <div class="section_header">
+                            <h3 class="section_title">Другие Статьи</h3>
+                            <div class="section_text">Псевдокласс default
+                            <p>Псевдокласс <strong>:default</strong> выбирает стандартный элемент на форме. Как правило, в роли такого элемента выступает кнопка отправки:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Селекторы в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                :default {
+                    border: 2px solid red;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;form&gt;
+                &lt;input name="login"/&gt;
+                &lt;input type="submit" value="Войти" /&gt;
+            &lt;/form&gt;
+        &lt;/body&gt;
+    &lt;/html&gt; 
+    </code>
+</pre>
+                <img src="img/Пример12.png" alt="">
+                    </div>
+                        </div>
+                            </div>
+
+                            <div class="container">
+                                <div class="section_header">
+                                    <h3 class="section_title">Псевдоклассы valid и invalid</h3>
+                                    <div class="section_text">
+                                    <p>Псевдоклассы :valid и :invalid стилизуют элементы формы в зависимости от того, проходят они валидацию или нет.</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Селекторы в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                input:invalid {
+                    border: 2px solid red;
+                }
+                input:valid {
+                    border: 2px solid green;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;form&gt;
+                &lt;p&gt;&lt;input type="text" name="login" placeholder="Введите логин" required /&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;input type="password" name="password" placeholder="Введите пароль" required /&gt;&lt;/p&gt;
+                &lt;input type="submit" value="Войти" /&gt;
+            &lt;/form&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+                        <img src="img/Пример13.png" alt="">
+                            </div>
+                                </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="section_header">
+                                            <h3 class="section_title">Псевдоклассы in-range и out-of-range</h3>
+                                    <div class="section_text">
+                                        Псевдоклассы :in-range и :out-of-range стилизуют элементы формы в зависимости от того, попадает ли их значение в определенный диапазон. 
+                                        Это в первую очередь относится к элементу &lt;input type="number"&gt;.
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Селекторы в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                :in-range {
+                    border: 2px solid green;
+                }
+                :out-of-range {
+                    border: 2px solid red;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label for="age"&gt;Ваш возраст:&lt;/label&gt;
+                    &lt;input type="number" min="1" max="100" value="10" id="age" name="age"/&gt;
+                &lt;/p&gt;
+                &lt;input type="submit" value="Отправить" /&gt;
+            &lt;/form&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;       
+    </code>
+</pre>
+                                    <p>Здесь атрибуты min и max задают диапазон, в которое должно попадать вводимое в поле значение:</p>
+                                    <img src="img/Пример14.png" alt="">
+                                    </div>
+                                        </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="section_header">
+                                                    <h3 class="section_title">Псевдоклассы required и optional</h3>
+                                                    <div class="section_text">
+                                            <p>Псевдоклассы <strong>:required</strong> и <strong>:optional</strong> стилизуют элемент в зависимости от того, установлен ли у него атрибут required:</p>
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Селекторы в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                :optional {
+                    border: 2px solid blue;
+                }
+                :required {
+                    border: 2px solid red;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label for="login"&gt;Логин:&lt;/label&gt;
+                    &lt;input type="text" id="login" name="login" required /&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for="password"&gt;Пароль:&lt;/label&gt;
+                    &lt;input type="password" id="password" name="password" required /&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for="name"&gt;Имя:&lt;/label&gt;
+                    &lt;input type="text" id="name" name="name"/&gt;
+                &lt;/p&gt;
+                &lt;input type="submit" value="Регистрация" /&gt;
+            &lt;/form&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+</pre>
+                    <img src="img/Пример15.png" alt="">
+                                            </div>
+                                                </div>
+                                                    </div>
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+                <div class="about">    
+                    <div class="about_item">
+                        <div class="about_image">
+                            <img src="img/Псевдоклассы5.jpg" alt="">
+                        </div>
+                            <div class="about_text"> <a class ="nav_link2" href="Селекторы атрибутов.html">Псевдоэлементы</a></div>
+                   </div>
+                    <div class="about_item"> 
+                       <div class="about_image">
+                           <img src="img/Псевдоклассы.png" alt="">
+                        </div>
+                        <div class="about_text"><a class ="nav_link2" href="Селекторы потомков.html">Псевдоклассы дочерних элементов</a></div>
+                   </div>
+                    <div class="about_item">
+                       <div class="about_image">
+                            <img src="img/Псевдоклассы3.png" alt="">
+                       </div>
+                       <div class="about_text"><a class ="nav_link2" href="Псевдоклассы.html">Псевдоклассы </a></div>
+                   </div>
+                </div>
+           </div>
+       </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Помните, что обычно есть решение проще и быстрее того, что первым приходит вам в голову."</h1>
+                <h2 class="intro_subtitle">Дональд Кнут</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Селекторы дочерних элементов</h3>
+             <div class="section_text"><p>Селекторы дочерних элементов отличаются от селекторов потомков тем, что позволяют выбрать элементы только первого уровня вложенности. Например:</p>
+<pre>
+    <code>
+    &lt;body&gt;
+        &lt;h2&gt;Заголовок&lt;/h2&gt;
+        &lt;div&gt;
+            &lt;p&gt;Текст&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    </code>
+</pre>
+            <p>Хотя вложенными в элемент body элементами являются целых три - h2, div, p, 
+                но дочерними из них являются только два - div и h2, так как они находятся в первом уровне вложенности. 
+                А элемент p находится на втором уровне вложенности, так как вложен внутрь элемента div, а не просто элемента body.
+            </p>
+            <p>Для обращения к дочерним элементам используется знак угловой скобки:</p>
+           
+<pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title>Селекторы атрибутов в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            .article > p{
+             
+                color: red;
+            }
+        &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class="article"&gt;
+                &lt;p&gt;Аннотация к статье&lt;/p&gt;
+                &lt;/div class="content"&gt;
+                    &lt;p&gt;Текст статьи&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+                <p>В блоке с классом article есть два параграфа. Селектор .article >
+                p выбирает только те параграфы, который находятся непосредственно в блоке article.</p>
+                <p>Если бы мы использовали другой селектор без символа ></p>
+<pre>
+    <code>
+    .article p{
+             
+        color: red;
+    }
+    </code>
+</pre>
+                <p>Тогда стиль бы применялся ко всем параграфам на всех уровнях вложенности</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Селектор.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Селекторы атрибутов.html">Селекторы атрибутов</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Селектор3.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Селекторы потомков.html">Селекторы потомков</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/Селектор7.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Селекторы уровня.html">Селекторы элементов одного уровня</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CSS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">псевдоэлементы, Псевдоклассы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+    </header>   
+    <div class="content">
+        <div class="container"></div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете."</h1>
+                <h2 class="intro_subtitle"> Мартин Голдинг</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">20 полезных советов по работе с CSS3</h2>
+             <div class="section_text"><p>В разработке мы всё больше ориентируемся на эффективность. 
+                 Нужна быстрая загрузка и скорейший рендеринг за счет правильного выбора селекторов и минимизации кода. 
+                 Препроцессоры Less и SCSS сильно облегчают дело, но существует множество способов написать минималистичный,
+                быстрый CSS «родным» способом. В этом руководстве 20 советов  CSS, которые сокращают дублирование правил и
+                 переопределений и стандартизируют стили. Они помогут вам создать персональный стартовый фреймворк, эффективный и рабочий.
+             </p>
+            </div>   
+        </div>
+     </div>
+     </div>
+     <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">1 Используйте CSS-сброс</h3>
+            <div class="section_text"><p>Библиотеки сброса CSS, такие как normalize.css, существуют уже много лет. 
+                Они очищают стили вашего сайта и помогают отображать сайт более-менее одинаково в разных браузерах. 
+                В большинстве случаев вам не нужны все правила normalize.cssи вы обойтёсь одним простым правилом,
+                чтобы обнулить все margin'ы и padding'и, которые браузер отображает самостоятельно:</p>
+    <pre><code>
+    *{    
+    box-sizing: border-box;   
+    margin: 0;    
+    padding: 0;  
+    F}                        
+    </code></pre>
+                <p>Использовать box-sizing необязательно — если вы следуете указанному ниже Inherit box-sizing, вы можете это пропустить.</p>
+        </div>
+            </div>
+            </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">2 Inherit box-sizig</h3>
+                    <div class="section_text"><p>Пусть box-sizing будет унаследован от html:</p>
+    <pre><code>
+    html {    
+    box-sizing: border-box;  
+    }    
+    :before, *:after {    
+    box-sizing: inherit;  
+    }
+    </code></pre>
+                        <p>Это облегчает изменение box-sizing, когда код вводится через 
+                            сторонние плагины или приложения, которые используют другое поведение.</p>
+            </div>
+                </div>
+                </div>
+                <div class="container">
+                    <div class="section_header">
+                        <h3 class="section_title">3 Удалить отступы margin с Flexbox</h3>
+                        <div class="section_text"><p>Сколько раз вы пытались создать сетку, например, портфолио или галерею изображений,
+                            где вы использовали float, а затем должны были очистить их или сбросить поля, чтобы столбцы разбивались на нужное вам количество строк? 
+                            Избавьтесь от n-го, первого и последнего отступа, используя space-between между свойствами во flexbox:</p>
+    <pre><code>
+    .flex-container {    
+        display: flex;   
+        justify-content: space-between;  
+    }    
+    .flex-container .item {    
+        flex-basis: 23%;  
+    }
+    </code></pre>
+                    <p>Теперь колонки выглядят равномерно.</p>
+                </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container">
+                        <div class="section_header">
+                            <h3 class="section_title">4 Используйте :not() для стилизации Border в списках</h3>
+                            <div class="section_text"><p>Очень распространенной практикой в веб-дизайне было использование 
+                                :last-child или :nth-child селекторов для отмены стиля, ранее объявленного в родительском селекторе. 
+                                Подумайте о навигационном меню, которое использует 
+                                границы для создания разделителя между ссылками, и о втором правиле, 
+                                добавленном для снятия этой границы с конца:</p>
+    <pre><code>
+    .nav li {    
+        border-right: 1px solid #666;  
+    }
+    .nav li:last-child {    
+        border-right: none;  
+    }
+    </code></pre>
+    <p>Это довольно грязно, так как заставляет браузер не только визуализировать вещи одним способом,
+         но и отменять их для конкретного селектора. Сброс стилей таким способом иногда неизбежен, 
+         но по большей части вы можете использовать псевдо-класс :not(), 
+        чтобы применить стиль только к тем элементам, которые вам нужны, в одном единственном утверждении:</p>
+    <pre><code>
+    .nav li:not(:last-child) {    
+        border-right: 1px solid #666;  
+    }
+    </code></pre>
+                <p>Здесь сказано, поставить границу на всех пунктах .nav-листа, кроме последнего. Как просто!</p>
+                <p>Конечно, вы также можете использовать .nav li + li 
+                или даже .nav li:first-child ~ li, но :not() всегда будет более семантичным и простым для понимания.</p>
+        </div>
+            </div>
+            </div>
+            </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">5  Добавьте line-height в body</h3>
+                    <div class="section_text"><p>Единственное, что приводит к неэффективным таблицам стилей, 
+                        — это повторная декларация одного и того же снова и снова. 
+                        Чем лучше вы будете планировать свой проект и комбинировать правила, 
+                        тем более плавным будет ваш CSS. Один из способов сделать это — запланировать каскад и то,
+                        как стили, которые вы пишете для общих селекторов, могут быть унаследованы в другом месте. 
+                        Высота строк — это одно свойство, которое вы можете задать для всего вашего проекта, не только для того, 
+                        чтобы минимизировать строки кода, но и для того, 
+                        чтобы придать стандартный вид типографии вашего сайта.</p>
+                        <p>Вместо того, чтобы добавлять высоту строк к каждой p, h* и так далее, добавляйте ее в тело:</p,>
+<pre>
+<code>
+    body {    
+        line-height: 1.5;  
+    }
+</code>
+</pre>
+    
+                        <p>Обратите внимание, что здесь мы не объявляем единицу измерения — мы просто говорим, 
+                        чтобы высота строки была в полтора раза больше, чем размер шрифта для отрисовываемого текста.</p>
+    
+            </div>
+                </div>
+                </div>
+                </div>
+                <div class="container">
+                    <div class="section_header">
+                        <h3 class="section_title">6 Vertically Center везде</h3>
+                        <div class="section_text"><p>Установка глобального правила вертикальной центровки макета —
+                             отличный способ установить основу для элегантного отображения макета,
+                              если вы не хотите использовать CSS Grid.</p>
+    <pre>
+    <code>
+    html, body {    
+        height: 100%;    
+        margin: 0;  
+    }    
+    body {    
+        -webkit-align-items: center;    
+        -ms-flex-align: center;    
+        align-items: center;    
+        display: -webkit-flex;    
+        display: flex;  
+        }
+    </code>
+    </pre>
+                </div>
+                    </div>
+                    </div>
+                    </div>
+                <div class="container">
+                    <div class="section_header">
+                        <h3 class="section_title"> 7 Используйте SVG-иконки</h3>
+                        <div class="section_text"><p>SVG хорошо масштабируется для всех типов разрешений и поддерживается во всех браузерах.
+                             Так что избавьтесь от своих файлов .png, .jpg и остальной .gif-jif-чуши. Даже 
+                             FontAwesome теперь предлагает иконки SVG в FontAwesome 5. 
+                            SVG работает так же, как и любой другой тип изображения:</p>
+    <pre>
+        <code>
+    .logo {    
+        background: url("logo.svg");  
+    }   
+        </code>
+    </pre>
+                            <p>Если вы используете SVG для взаимодействующих элементов, таких как кнопки, 
+                            и SVG не загружается, правило, подобное этому, поможет сохранить доступность:</p>
+    <pre>
+        <code>
+    .no-svg .icon-only:after {    
+        content: attr(aria-label);  
+    }
+        </code>
+    </pre>
+                </div>
+                    </div> 
+                      </div>
+                      </div>
+                    <div class="container">
+                        <div class="section_header">
+                            <h3 class="section_title"> 8 Используйте «Owl» селектор</h3>
+                            <div class="section_text"><p>Используйте универсальный селектор (*) со смежным селектором (+) и 
+                                вы сможете задать правила для всех элементов в потоке документа,
+                                которые следуют за другими элементами:</p>
+    <pre>
+        <code>
+    {    
+        margin-top: 1.5rem;  
+    }
+        </code>
+    </pre>
+            <p>Это отличный трюк, который может помочь вам создать более однородный шрифт и интервалы. 
+                В приведенном выше примере, все элементы, которые следуют за другими элементами, например, H4, 
+                который следует за H3, или абзац, следующий за другим абзацем, будут иметь по крайней мере 1.5rem отступа (примерно 30px).</p>
+                    </div>
+                        </div>
+                        </div>
+                        <div class="section_header">
+                            <h3 class="section_title">9 Последовательный вертикальный ритм
+                            </h3>
+                            <div class="section_text"><p>Последовательный вертикальный ритм обеспечивает визуальную эстетику, которая делает содержимое читабельным. 
+                                Если owl-селектор получается слишком общим, используйте универсальный селектор (*) внутри элемента для создания
+                                 последовательного вертикального ритма для определенных участков макета:</p>
+    <pre>
+        <code>
+    .intro > * {   
+        margin-bottom: 1.25rem;  
+    }
+        </code>
+    </pre>
+                        </div>
+                            </div>
+                            <div class="section_header">
+                                <h3 class="section_title">10 Use box-decoration-break чтобы текст был красивым</h3>
+                                <div class="section_text"><p>Предположим, вы стараетесь получить равномерный интервал, поля, подсветку 
+                                    или цвет фона к длинным строкам текста, которые обернуты более чем одной строкой, но не хотите, чтобы 
+                                    весь абзац или заголовок выглядел как один большой блок. Свойство box-decoration-break позволяет применять 
+                                    стили только к тексту, сохраняя при этом нетронутыми padding'и и margin'ы. Это особенно полезно, 
+                                    если вы хотите 
+                                    применить выделение при наведении курсора или стиль подтекста в слайдере, чтобы он подсветился:</p>
+    <pre>
+        <code>
+    .p {
+        display: inline-block;
+        box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+    }
+        </code>
+    </pre>
+                                <p>Объявление inline-block позволяет наносить цвета, фон, поля и подкладку на каждую строку текста, а не на весь элемент, а объявление clone обеспечивает равномерное нанесение этих стилей на каждую строку.</p>
+                            </div>
+                                </div>
+                                <div class="section_header">
+                                    <h3 class="section_title">11 Ячейки таблицы равной ширины</h3>
+                                    <div class="section_text"><p>Таблицы могут быть шилом в з..це, поэтому попробуйте использовать 
+                                        таблицу-раскладку: фиксированную, чтобы ячейки оставались на одинаковой ширине:</p>
+    <pre>
+        <code>
+    .calendar {    
+        table-layout: fixed;  
+    }
+        </code>
+    </pre>                               
+                                </div>
+                                    </div>
+                                    <div class="section_header">
+                                        <h3 class="section_title">12 Принудительное отображение пустых ссылок с помощью селекторов атрибутов</h3>
+                                        <div class="section_text"><p>Это особенно полезно для ссылок, вставляемых через CMS,
+                                            которые, как правило, не имеют атрибута класса и помогают стилизовать их специально,
+                                            не оказывая общего влияния на каскад. Например, элемент <a> не имеет текстового значения, 
+                                            но атрибут href имеет ссылку:</p>    
+    <pre>
+        <code>
+    a:empty::before {    
+        content: attr(href);  
+    }
+        </code>
+    </pre>
+                                    </div>
+                                        </div>
+                                        <div class="section_header">
+                                            <h3 class="section_title">13 Стиль ссылки «Default»</h3>
+                                            <div class="section_text"><p>Кстати, о стиле ссылок, вы можете найти общий стиль практически в каждом листе стилей. 
+                                                Это заставляет вас писать дополнительные переопределения и правила стилей для любых ссылок в дочернем элементе, 
+                                                а при работе с CMS, например, WordPress, может привести к проблемам со стилем самой главной ссылки, например, 
+                                                с превышением цвета текста кнопки. 
+                                                Попробуйте этот менее навязчивый способ чтобы добавить стиль для ссылок «по умолчанию»:</p>  
+    <pre>
+        <code>
+    a:not() {    
+        color: #999;    
+        text-decoration: none;  
+        transition: all ease-in-out .3s;
+    }
+        </code>
+    </pre>
+                                        <p>Теперь стиль будет применяться только к тем ссылкам, которые не имеют своего правила стиля.</p>
+                                        </div>
+                                            </div>
+                                            <div class="section_header">
+                                                <h3 class="section_title">14 Блоки с нужным соотношением сторон</h3>
+                                                <div class="section_text"><p>Чтобы создать блок с нужными пропорциями, вам нужно добавить div'у top 
+                                                    или bottom padding:</p> 
+    <pre>
+        <code>
+    .container {    
+        height: 0;    
+        padding-bottom: 20%;    
+        position: relative;  
+    }    
+    .container div {    
+        border: 2px dashed #ddd;    
+        height: 100%;    
+        left: 0;    
+        position: absolute;    
+        top: 0;    
+        width: 100%;  
+    }
+        </code>
+    </pre>
+                                        <p>Использование 20% отступа делает высоту div равной 20% от ее ширины. Независимо от ширины viewport, дочерний div сохранит свои пропорции (100% / 20% = 5:1).</p>
+                                            </div>
+                                                </div>
+                                                <div class="section_header">
+                                                    <h3 class="section_title">15 Беспорядочные изображения в стиле</h3>
+                                                    <div class="section_text"><p>Этот совет касается не столько сокращения кода, сколько хорошего стиля.
+                                                         Бардак с изображениями происходят по многим причинам. А стили изображений часто приводят к путанице. 
+                                                        Создавайте более эстетичные правилас помощью этого небольшого кусочка CSS:</p> 
+    <pre>
+        <code>
+    img {    
+        display: block;    
+        font-family: Helvetica, Arial, sans-serif;    
+        font-weight: 300;    
+        height: auto;    
+        line-height: 2;    
+        position: relative;    
+        text-align: center;    
+        width: 100%;  
+    }
+        img:before {    
+        content: "We're sorry, the image below is missing :(";    
+        display: block;    
+        margin-bottom: 10px;  
+    }    
+        img:after {    
+        content: "(url: " attr(src) ")";   
+        display: block;    
+        font-size: 12px;  
+    }
+            </code>
+        </pre>
+                    <div class="section_header">
+                                <h3 class="section_title">16 Используйте rem для глобальных размеров, а em для локальных размеров</h3>
+                                <div class="section_text"><p>После установки базового размера шрифта в корне, например html{font-size: 15px;}, 
+                                    вы можете установить размер шрифта для размещения элементов в rem:
+                                </p>
+    <pre>
+        <code>
+    article {    
+        font-size: 1.25rem;  
+    }    
+    aside {    
+        font-size: .9rem;  
+    }
+        </code>
+    </pre>
+                                <p>Затем установите размер шрифта для текстовых элементов в соответствии в em: </p>
+    <pre>
+        <code>
+    h2 {    
+        font-size: 2em;  
+    }    
+    p {    
+        font-size: 1em;  
+    }
+        </code>
+    </pre>
+                                <p>Теперь каждый содержащий элемент становится раздробленным и легким в стиле, более удобным в обслуживании и гибким.</p>
+                            </div>
+                                </div>  
+                                <div class="section_header">
+                                    <h3 class="section_title">17 Заглушите автоматически проигрывающиеся видеозаписи, которые пока не видно
+                                    </h3>
+                                    <div class="section_text"><p>Это отличная лайфхак как перестать раздражать ваших посетителей звуком из автопроигрываемого видео при загрузке страницы. И снова на помощь приходит замечательный псевдо-селектор :not():</p>
+    <pre>
+        <code>
+    video:not() {    
+        display: none;  
+    }
+        </code>
+    </pre>
+                                </div>
+                                    </div>
+                                    <div class="section_header">
+                                        <h3 class="section_title">18 Используйте :root для Flexible Type</h3>
+                                        <div class="section_text"><p>Размер шрифта в адаптивной вёрстке должен автоматически подстраиваться под размер экрана.
+                                             Рассчитайте размер шрифта по высоте и ширине экрана, используя :root: и единицы viewport</p>
+    <pre>
+        <code>
+    :root {    
+        font-size: calc(1vw + 1vh + .5vmin);  
+    }
+        </code>
+    </pre>
+                                        <p>Теперь вы можете использовать единицу em, основанную на значении, вычисленном в :root:</p>
+    <pre>
+        <code>
+    body {    
+        font: 1rem/1.6 sans-serif;  
+        }
+        </code>
+    </pre>
+                                        <p>Сочетайте это с приведенным выше трюком «rem/em» и получите ещё больший контроль.</p>
+                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section_header">
+                                    <h3 class="section_title">19 Установите размер шрифта в своих текстовых формах для большего удобства на мобильных устройствах</h3>
+                                    <div class="section_text"><p>Чтобы мобильные браузеры (iOS Safari и т.д.) не увеличивали размеры элементов HTML-формы при нажатии выпадающего списка select, добавьте размер шрифта к стилям ввода:</p>
+    <pre>
+        <code>
+    input,  
+    input,  
+    select,  
+    textarea {    
+        font-size: 16px;  
+    }
+        </code>
+    </pre>
+                                </div>
+                                    </div>
+                                    <div class="section_header">
+                                        <h3 class="section_title">20 Используйте CSS-переменные!</h3>
+                                        <div class="section_text"><p>И самое прикольное: высший уровень CSS — это переменные CSS. 
+                                            Переменными можно объявить набор общих значений свойств, которые могут быть повторно использованы 
+                                            через ключевое слово в любом месте таблицы стилей. Ваш бренд может иметь набор цветов, которые будут
+                                             использоваться во всем проекте для сохранения последовательности. Повторение этих значений цветов снова
+                                              и снова в CSS является не только рутинной работой, но и сулит ошибки. Если в какой-то момент 
+                                              цвет необходимо изменить, вы вынуждены искать и заменять его, 
+                                            что не является надежным или быстрым. Переменные делают такую настройку намного проще. Например:</p>
+    <pre>
+        <code>
+    :root {
+        --main-color: #06c;
+        --accent-color: #999;
+    }
+    h1, h2, h3 {
+        color: var(--main-color);
+    }
+    a:not(),
+        p,
+        footer span{
+        color: var(--accent-color);
+    }
+            </code>
+        </pre>
+    </div>
+        </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Другие Статьи</h3>
+            </div>
+                 </div>
+                    <div class="about">    
+                        <div class="about_item">
+                            <div class="about_image">
+                                <img src="img/1.jpg" alt="">
+                            </div>
+                                <div class="about_text"> <a class ="nav_link2" href="index.html">О проекте</a></div>
+                                </div>
+                            <div class="about_item"> 
+                                <div class="about_image">
+                                 <img src="img/2.jpg" alt="">
+                                </div>
+                            <div class="about_text"><a class ="nav_link2" href="Базовое руководство CSS3.html">Базовое руководство CSS</a></div>
+                            </div>
+                            <div class="about_item">
+                                <div class="about_image">
+                                    <img src="img/3.jpg" alt="">
+                                        </div>
+                                <div class="about_text"><a class ="nav_link2" href="Различия.html">Различия между CSS3 и CSS</a></div>
+                                        </div>
+                                            </div>
+                                        </div>
+                                </div>                               
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

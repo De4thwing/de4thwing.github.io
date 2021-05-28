@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style7.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Некоторые проблемы лучше не решать, а избегать."</h1>
+                <h2 class="intro_subtitle">Чарльз Энтони Ричард Хоар</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Наследование стилей</h3>
+            <div class="section_text">
+               <p>Для упрощения определения стилей в CSS применяется механизм наследования стилей. 
+                Этот механизм предполагает, что вложенные элементы могут наследовать стили своих элементов-контейнеров. 
+                Например, пуcть у нас на веб-странице есть заголовок и параграф, которые должны иметь текст красного цвета.
+                Мы можем отдельно к параграфу и заголовку применить соответствующий стиль, который установит нужный цвет шрифта:</p>
+    <pre>
+        <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Наследование стилей в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                p {color: red;}
+                h2 {color: red;}
+            &lt;/style&gt;
+            &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h2&gt;Наследование стилей&lt;/h2&gt;
+            &lt;p&gt;Текст про наследование стилей в CSS 3&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+        </code>
+    </pre>
+                <p>
+                    Однако поскольку и элемент p, и элемент h2 находятся в элементе body, то они наследуют от этого контейнера - элемента body многие стили. И чтобы не дублировать определение стиля, мы могли бы написать так:</p>
+    
+    <pre>              
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Наследование стилей в CSS3&lt;/title&gt;
+            &lt;style&gt;
+                body {color: red;}
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h2&gt;Наследование стилей&lt;/h2&gt;
+            &lt;p&gt;Текст про наследование стилей в CSS 3&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+    </pre>
+                <p>В итоге определение стилей стало проще, а результат остался тем же.</p>
+                <p>Если нам нежелателен унаследованный стиль, то мы его можем переопределить для определенных элементов:</p>
+    <pre>
+        <code>
+    body {color: red;}
+    p {color: green;}
+        </code>
+    </pre>
+                <p>При нескольких уровнях вложенности элементы наследуют стили только ближайшего контейнера:</p>
+    <pre>
+        <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Наследование стилей в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            body {color: red;}
+            div {color:black;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;h2&gt;Наследование стилей&lt;/h2&gt;
+            &lt;p&gt;Текст про наследование стилей в CSS 3&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Copyright © MyCorp.com&lt;/p&gt;
+    &lt;/boy&gt;
+    &lt;/html&gt;
+        &lt;/code&gt;
+    </pre>
+                        <p>Здесь веб-страница имеет следующую структуру:</p>
+                        <img src="img/4.22.png" alt="" class="img">
+                        <p>Для элемента div переопределяется цвет текста. И так как элемент h2 и один из параграфов находятся в элементе div, то они наследуют стиль именно элемента div. Второй параграф находится непосредственно в элементе body и поэтому наследует стиль элемента body.</p>
+                        <p>Однако не ко всем свойствам CSS применяется наследование стилей. Например, свойства, которые представляют отступы (margin, padding) и границы (border) элементов, не наследуются.</p>
+                        <p>Кроме того, браузеры по умолчанию также применяют ряд предустановленных стилей к элементам. Например, заголовки имеют определенную высоту и т.д.</p>
+           </div>   
+       </div>
+    </div>
+    </div>      
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Другие Статьи</h3>
+                        </div>
+                            </div>                    
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Стиль2.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Стиль.html">Введение в стили</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Стиль3.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Каскадность стилей.html">Каскадность стилей</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/3.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Базовое руководство CSS3.html">Базовое руководство CSS</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

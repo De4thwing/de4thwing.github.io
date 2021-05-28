@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style6.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Что бы нового мы ни создавали, мы должны дать людям возможность переходить от старых инструментов и идей к новым."</h1>
+                <h2 class="intro_subtitle">Бьёрн Страуструп</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+    <div class="container">
+        <div class="section_header">
+            <h3 class="section_title">Введение в стили</h3>
+            <div class="section_text">
+               <p>Любой html-документ, сколько бы он элементов не содержал, будет по сути "мертвым" без использования стилей. 
+                   Стили или лучше сказать каскадные таблицы стилей <strong>(Cascading Style Sheets)</strong> или попросту CSS определяют представление документа, 
+                   его внешний вид. Рассмотрим вкратце применение стилей в контексте HTML5.</p>
+                   <p>
+                    Стиль в CSS представляет правило, которое указывает веб-браузеру, как надо форматировать элемент. 
+                    Форматирование может включать установку цвета фона элемента, установку цвета и типа шрифта и так далее.
+                </p>
+                <p>
+                    Определение стиля состоит из двух частей: <strong>селектор</strong>, который указывает на элемент, 
+                    и <strong>блок объявления стиля</strong> - набор команд, которые устанавливают правила форматирования. Например:
+                </p>
+                
+    <pre>
+        <code>
+    div{
+        background-color:red;
+        width: 100px;
+        height: 60px;
+    }
+        </code>
+    </pre>
+                <p>
+                В данном случае селектором является div. Этот селектор указывает, что этот стиль будет применяться ко всем элементам div.
+                </p>
+                <p>
+                После селектора в фигурных скобках идет <strong>блок объявления стиля</strong>. 
+                Между открывающей и закрывающей фигурными скобками определяются команды, указывающие, как форматировать элемент.
+                </p>
+                <p>
+                    Каждая команда состоит из <strong>свойства</strong> и <strong>значения</strong>. Так, в следующем выражении:
+                </p>  
+    <pre>
+    <code>
+    background-color:red;
+    </code>
+    </pre>
+                <p>background-color представляет свойство, а red - значение. Свойство определяет конкретный стиль. 
+                Свойств css существует множество. Например, background-color определяет цвет фона. 
+                После двоеточия идет значение для этого свойства. 
+                Например, выше указанная команда определяет для свойства background-color значение red. 
+                Иными словами, для фона элемента устанавливается цвет "red", то есть красный.</p>
+                <p>После каждой команды ставится точка с запятой, которая отделяет данную команду от других.
+                <p>Наборы таких стилей часто называют таблицами стилей или CSS (<strong>Cascading Style Sheets</strong> или каскадные таблицы стилей). Существуют различные способы определения стилей.</p>
+           </div>   
+       </div>
+    </div>
+    </div>
+                <div class="container">
+                    <div class="section_header">
+                        <h3 class="section_title">Атрибут style</h3>
+                        <div class="section_text">
+                        <p>Первый способ заключается во встраивании стилей непосредственно в элемент с помощью атрибута style:</p>
+    <pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стили &lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h2 style="color:blue;"&gt;Стили&lt;/h2&gt;
+            &lt;div style="width: 100px; height: 100px; background-color: red;"&gt;&lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+    </pre>
+                        <img src="img/Стиль4.png" alt="">
+                        <p>Здесь определены два элемента - заголовок h2 и блок div. 
+                            У заголовка определен синий цвет текста с помощью свойства color. 
+                            У блока div определены свойства ширины (width), высоты (height), а также цвета фона (background-color).</p>
+                        <p>Второй способ состоит в использования элемента style в документе html. Этот элемент сообщает браузеру, что данные внутри являются кодом css, а не html:</p>
+    <pre>
+        <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title>Стили&lt;/title&gt;
+            &lt;style&gt;
+            h2{
+                color:blue;
+            }
+                div{
+                width: 100px; 
+                height: 100px; 
+                background-color: red;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+                &lt;h2>Стили&lt;/h2&gt;
+                &lt;div>&lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+        </code>
+    </pre>
+                    <p>Результат в данном случае будет абсолютно тем же, что и в предыдущем случае.</p>
+                    <p>Часто элемент style определяется внутри элемента head, однако может также использоваться в других частях HTML-документа. 
+                    Элемент style содержит наборы стилей. У каждого стиля указывается вначале селектор, после чего в фигурных скобках 
+                    идет все те же определения свойств css и их значения, что были использованы в предыдущем примере.</p>
+                    <p>Второй способ делает код html чище за счет вынесения стилей в элемент style. 
+                    Но также есть и третий способ, который заключается в вынесении стилей во внешний файл.</p>
+                    <p>Создадим в одной папке с html странице текстовый файл, который переименуем в styles.css и определим в нем следующее содержимое:</p>
+    <pre>
+        <code>
+    h2{
+        color:blue;
+    }
+        div{
+        width: 100px; 
+        height: 100px; 
+        background-color: red;
+    }
+        </code>
+    </pre>
+                    <p>Это те же стили, что были внутри элемента style. И также изменим код html-страницы:</p>
+    <pre>
+        <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Стили&lt;/title&gt;
+            &lt;link rel="stylesheet" type="text/css" href="styles.css"/&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h2&gt;Стили&lt;/h2&gt;
+            &lt;div&lt;/div&gt;
+            &lt;/body&gt;
+    &lt;/html&gt;
+        </code>
+    </pre>
+                    <p>Здесь уже нет элемента style, зато есть элемент link, который подключает выше созданный файл styles.css: 
+                        &ltlink rel="stylesheet" type="text/css" href="styles.css"/&gt;/p>
+                    <p>Таким образом, определяя стили во внешнем файле, мы делаем код html чище, структура страницы отделяется от ее стилизации.
+                        При таком определении стили гораздо легче модифицировать, чем если бы они были определены внутри 
+                        элементов или в элементе style, и такой способ является предпочтительным в HTML5.
+                    </p>
+                    <p>А в файле style.css определен следующий стиль:</p>
+    <pre>
+        <code>
+    div{
+        width:50px;
+        height:50px;
+        background-color:red;
+    }
+        </code>
+    </pre>
+                    <p>В данном случае в трех местах для элемента div определено свойство width, причем с разным значением. Какое значение будет применяться к элементу в итоге? Здесь у нас действует следующая система приоритетов:</p>
+                    <ul>
+                        <li>Если у элемента определены встроенные стили (inline-стили), то они имеют высший приоритет,
+                             то есть в примере выше итоговой шириной будет 120 пикселей</li>
+                        <li>Далее в порядке приоритета идут стили, которые определены в элементе style</li>
+                        <li>Наименее приоритетными стилями являются те, которые определены во внешнем файле.</li>
+                    </ul>
+                </div>
+                    </div>
+                        </div>
+
+
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Атрибуты html и стили css</h3>
+                        <div class="section_text">
+                            <p>Многие элементы html позволяют устанавливать стили отображения с помощью атрибутов.
+                                 Например, у ряда элементов мы можем применять атрибуты width и height для установки ширины и высоты элемента 
+                                 соответственно. Однако подобного подхода следует избегать и вместо встроенных атрибутов следует применять стили
+                                 CSS. Важно четко понимать, что разметка HTML должна предоставлять только структуру html-документа, а весь его 
+                                 внешний вид, стилизацию должны определять стили CSS.</p>
+            </div>
+                </div>
+                    </div>
+                <div class="section_header">
+                    <h3 class="section_title">Валидация кода CSS</h3>
+                        <div class="section_text">
+                            <p>В процессе написания стилей CSS могут возникать вопросы, а правильно ли так определять стили, корректны ли они. 
+                                И в этом случае мы можем воспользоваться валидатором css, 
+                                который доступен по адресу <a class="nav_link1" href="http://jigsaw.w3.org/css-validator/">http://jigsaw.w3.org/css-validator/.</a></p>
+                </div>
+                    </div>
+                        </div>
+            <div class="container">
+                <div class="section_header">
+                    <h3 class="section_title">Другие Статьи</h3>
+                        </div>
+                            </div>                    
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Стиль2.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Наследование стилей.html">Наследование стилей</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Стиль3.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Каскадность стилей.html">Каскадность стилей </a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/3.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Базовое руководство CSS3.html">Базовое руководство CSS</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

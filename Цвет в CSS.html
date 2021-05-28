@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <title>CSSForrest</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">CSSForrest</div>
+                <nav class="nav" id="nav">
+                    <div class="dropdown">
+                        <button class="mainmenubtn">
+                             <a class = "nav_link" href="index.html">О проекте <img src="img/Vector 22.svg"alt=""></a>
+                             </button>
+                             <div class="dropdown-child">
+                                <a class = "nav_link1" href="Базовое руководство CSS3.html">Базовое руководство CSS</a>
+                                <a class = "nav_link1" href="20 советов.html">20 полезных советов</a>
+                                <a class = "nav_link1" href="Различия.html">Различия между CSS и CCS3 </a>
+                              </div>
+                            </div>
+                            <div class="dropdown">
+                        <button class="mainmenubtn">    
+                            <a class = "nav_link" href="Основы.html">Основы CSS <img src="img/Vector 22.svg"alt=""></a>
+                            </button>
+                            <div class="dropdown-child">
+                                <a class = "nav_link1" href="Стили.html">Стили</a>
+                                <a class = "nav_link1" href="Селекторы.html">Селекторы</a>
+                                <a class = "nav_link1" href="Псевдоклассы, псевдоэлементы.html">Псевдоклассы, псевдоэлементы</a>
+                            </div>
+                              </div>
+                        <div class="dropdown">
+                            <button class="mainmenubtn">    
+                                <a class = "nav_link" href="Свойства.html">Cвойства <img src="img/Vector 22.svg"alt=""></a>
+                                </button>
+                                <div class="dropdown-child">
+                                    <a class = "nav_link1" href="Цвет.html">Цвет</a>
+                                    <a class = "nav_link1" href="Шрифт.html">Шрифт</a>
+                                    <a class = "nav_link1" href="Форматирование.html">Форматирование текста</a>
+                                </div>
+                        <a class = "nav_link" href="#"> <img src="img/search.svg"alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+                <button class="nav-toggle" id="nav_toggle" type="button" >
+                    <span class="nav-toggle__item">Menu</span> 
+                </button>
+                
+        </div>
+    </div>
+</header>   
+    <div class="content">
+        <div class="container">
+                
+                
+        </div>
+    </div>
+ <div class="intro" id="intro">
+        <div class="container"> 
+         <div data-slider></div>
+            <div class="intro_inner">  
+                <h1 class="intro_title">"Цвета рождают форму предмета."</h1>
+                <h2 class="intro_subtitle">Поль Сезанн</h2>
+        </div>
+    </div>
+</div>
+ <section class="section">  
+    <div class="copyright">
+     <div class="container">
+         <div class="section_header">
+             <h3 class="section_title">Цвет в CSS</h3>
+             <div class="section_text"><p>В CSS широкое распространение находит использование цветов. Чтобы установить цвет текста,
+                фона или границы, нам надо указать цвет.</p>
+            <p>Например, определим красный цвет для фона элемента div:</p>
+<pre>
+    <code>
+    div{
+        background-color: red;
+    }
+    </code>
+</pre>
+            <p>В CSS есть несколько различных свойств, которые в качестве значения требует определенный цвет. 
+                Например, за установку цвета текста отвечает свойство color, за установку фона элемента - свойство background-color, 
+                а за установку цвета границы - border-color.
+            </p>    
+            <p>Существует несколько различных способов определения цвета текста.</p>
+           <ul>
+               <li>
+               <strong>Шестнадцатеричного значение</strong>. Оно состоит из отдельных частей, 
+                которые кодируют в шестнадцатеричной системе значения для красного, зеленого и синего цветов.
+                <p>Например, #1C4463. Здесь первые два символа 1C представляю значение красной компоненты цвета, 
+                    далее 44 - значение зеленой компоненты цвета и 63 - значение уровня синего цвета. Финальный цвет, 
+                    который мы видим на веб-странице, образуется с помощью смешивания этих значений.
+                </p>
+                <p>
+                Например, #1C4463. Здесь первые два символа 1C представляю значение красной компоненты цвета, далее 44 - значение зеленой компоненты цвета и 63 - значение уровня синего цвета. 
+                Финальный цвет, который мы видим на веб-странице, образуется с помощью смешивания этих значений.
+                </p>
+               </li>
+               <li>
+                <strong>Значение RGB</strong>. Значение RGB также представляет последовательно набор значений для красного, зеленого и синего цветов (Red — красный, Green — зеленый, Blue — синий). 
+                Значение каждого цвета кодируется тремя числами, которые могут представлять либо процентные соотношения (0–100%), либо число от 0 до 255.    
+                <p>Например</p>
+<pre>
+    <code>
+    background-color: rgb(100%,100%,100%);
+    </code>
+</pre>
+                <p>Здесь каждый цвет имеет значение 100%. 
+                    И в итоге при смешивании этих значений будет создаваться белый цвет. А при значениях в 0% будет генерироваться черный цвет:</p>
+               
+<pre>
+    <code>
+    background-color: rgb(0%, 0%, 0%);
+    </code>
+</pre>
+                <p>Между 0 и 100% будут находиться все остальные оттенки.
+                Но, как правило, чаще применяются значения из диапазона от 0 до 255. Например,</p>
+<pre>
+    <code>
+    background-color: rgb(28, 68, 99);
+    </code>
+</pre>
+            </li>
+            <li>
+            <strong>Значение RGBA</strong>. Это тоже самое значение RGB плюс компонент прозрачности (Alpha). 
+            Компонент прозрачности имеет значение от 0 (полностью прозрачный) до 1 (не прозрачный). Например:
+<pre>
+    <code>
+    background-color: rgba(28, 68, 99, .6);
+    </code>
+</pre>
+            </li>
+            <li>
+            <strong>Значение HSL</strong>. HSL представляет аббривиатуру: Hue — тон, Saturation — насыщенность и Lightness — осветленность. 
+            HSL задает три значения. Первое значение Hue угол в круге оттенков - 
+            значение в градусах от 0 до 360. Например, красный — 0 (или 360 при полном обороте круга).
+            Каждый цвет занимает примерно 51°.
+            <p>Второе значение - Saturation - представляет насыщенность, то указывает, насколько чистым является цвет. 
+            Насыщенность определяется в процентах от 0 (полное отсутствие насыщенности) до 100% (яркий, насыщенный цвет).</p>
+            <p>Третье значение - Lightness - определяет осветленность и указывается в процентах от 0 (полностью черный) до 100 (полностью белый). 
+            Для получения чистого цвет применяется значение 50 %.</p>
+            <p>Например:</p>
+<pre>
+    <code>
+    background-color: hsl(206, 56%, 25%);
+    </code>
+</pre>
+            <p>Данный цвет является эквивалентом значений #1C4463 и rgb(28, 68, 99)</p>
+            </li>
+            <li>
+            <strong>Значение HSLA.</strong> Аналогично RGBA здесь к HSL добавляется компонента прозрачности в виде значения от 0 (полностью прозрачный) до 1 
+            (не прозрачный). Например:
+<pre>
+    <code>
+    background-color: hsl(206, 56%, 25%, .6);
+    </code>
+</pre>
+            </li>
+            <li>
+               <strong>Строковые значения</strong> . Существует ряд константных строковых значений, например, red (для красного цвета) или green (для зеленого цвета). К примеру,
+<pre>
+    <code>
+    color: red;
+    </code>
+</pre>
+            <p>является эквивалентом</p>
+<pre>
+    <code>
+    color: #ff0000;
+    </code>
+</pre>
+            <p>Полный перечень цветов можно найти на странице <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Здесь</a></p>
+            </li>
+           </ul>
+           <p>В заключение следует отметить, что существует множество бесплатных онлайн-генераторов цвета, где можно настроить и посмотреть цвет в нужном формате. 
+            Например,<a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Colors/Color_picker_tool">генератор цвета на mdn</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Прозрачность</h3>
+             <div class="section_text">
+                яд настроек цвета позволяют установить значение для альфа-компоненты, которая отвечает за прозрачность. Но также в CSS есть специальное свойство, которое позволяет установить прозрачность элементов - свойство opacity. 
+                В качестве значения оно принимает число от 0 (полностью прозрачный) до 1 (не прозрачный):
+<pre>
+    <code>
+    div{
+        width: 100px;
+        height: 100px;   
+        background-color: red;
+        opacity: 0.4;
+    }
+    </code>
+</pre>
+    </div>
+        </div>
+            </div>
+    <div class="container">
+        <div class="section_header">
+             <h3 class="section_title">Другие Статьи</h3>
+    </div>
+        </div>
+            <div class="about">    
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="img/Обтекание CSS.jpg" alt="">
+                    </div>
+                        <div class="about_text"> <a class ="nav_link2" href="Селекторы атрибутов.html">Обтекание текста</a></div>
+               </div>
+                <div class="about_item"> 
+                   <div class="about_image">
+                       <img src="img/Границы CSS.jpg" alt="">
+                    </div>
+                    <div class="about_text"><a class ="nav_link2" href="Селекторы потомков.html">Границы</a></div>
+               </div>
+                <div class="about_item">
+                   <div class="about_image">
+                        <img src="img/ФОн элемента.jpg" alt="">
+                   </div>
+                   <div class="about_text"><a class ="nav_link2" href="Фон.html">Фон элемента</a></div>
+               </div>
+            </div>
+       </div>
+   </div>
+</section>
+<footer>
+<div class="copyright">
+    @2021 CSSForrest by <span>De4thwing</span>
+</div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+

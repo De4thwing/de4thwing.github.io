@@ -1,2 +1,2 @@
-# de4thwing-ui.github.io
+# de4thwing.github.io
 Курсовая
